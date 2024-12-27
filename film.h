@@ -2,6 +2,7 @@
 #define FILM_H
 #include <string>
 #include <list>
+#include <vector>
 
 using std::string;
 using std::list;
@@ -30,6 +31,19 @@ public:
     string opis;
 
 };
+
+struct Film1 {
+    int year;
+    std::string name;
+    std::string director;
+    std::string type;
+};
+
+void addFilm(int year, const std::string &name, const std::string &director, const std::string &type);
+void deleteFilm(int index);
+void updateFilmTable();
+
+extern std::vector<Film1> f;
 
 /*
 Baza filmów:

@@ -384,6 +384,7 @@ C:/Users/Wojtek/Documents/Baza_Danych/mainwindow.h
  mdp:C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h
  mdp:C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h
  mdp:C:/Users/Wojtek/Documents/Baza_Danych/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/Baza_Danych_autogen/moc_predefs.h
+ mdp:C:/Users/Wojtek/Documents/Baza_Danych/film.h
  mdp:C:/Users/Wojtek/Documents/Baza_Danych/mainwindow.h
 C:/Users/Wojtek/Documents/Baza_Danych/ksiazka.h
 C:/Users/Wojtek/Documents/Baza_Danych/main.cpp
@@ -391,4 +392,5 @@ C:/Users/Wojtek/Documents/Baza_Danych/mainwindow.cpp
  uic:ui_mainwindow.h
 C:/Users/Wojtek/Documents/Baza_Danych/film.h
 C:/Users/Wojtek/Documents/Baza_Danych/film.cpp
+ uic:ui_mainwindow.h
 C:/Users/Wojtek/Documents/Baza_Danych/ksiazka.cpp

@@ -19,13 +19,13 @@ public:
     ~MainWindow();
 
     Ui::MainWindow *ui;
-
+    void updateTable(std::vector<Film1> &f);
 private slots:
     void on_Add_Button_clicked();
     void on_Delete_Button_clicked();
 
 private:
-    void updateTable();
+
 };
 
 extern MainWindow* mainWindowInstance;

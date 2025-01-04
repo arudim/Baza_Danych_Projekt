@@ -1,2 +1,4 @@
 build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/.qtc_clangd/*
-
+build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/Baza_Danych.exe
+build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/CMakeCache*
+build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/CMakeFiles/*

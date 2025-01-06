@@ -13,6 +13,7 @@ qt_add_executable(Baza_Danych
     mainwindow.ui
     ksiazka.h ksiazka.cpp
     film.h film.cpp
+    database.h database.cpp
 )
 
 target_link_libraries(Baza_Danych

@@ -4,6 +4,7 @@ C:/Users/Wojtek/Documents/Baza_Danych/main.cpp
 C:/Users/Wojtek/Documents/Baza_Danych/ksiazka.h
 C:/Users/Wojtek/Documents/Baza_Danych/mainwindow.h
  mmc:Q_OBJECT
+ mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/QJsonArray
  mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/q20functional.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/q20iterator.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/q20memory.h
@@ -24,6 +25,9 @@ C:/Users/Wojtek/Documents/Baza_Danych/mainwindow.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/qbytearrayalgorithms.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/qbytearraylist.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/qbytearrayview.h
+ mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/qcalendar.h
+ mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/qcborcommon.h
+ mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/qcborvalue.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/qchar.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/qcompare.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/qcompare_impl.h
@@ -37,6 +41,7 @@ C:/Users/Wojtek/Documents/Baza_Danych/mainwindow.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/qcontiguouscache.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/qdarwinhelpers.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/qdatastream.h
+ mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/qdatetime.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/qdebug.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/qendian.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/qexceptionhandling.h
@@ -54,6 +59,8 @@ C:/Users/Wojtek/Documents/Baza_Danych/mainwindow.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/qitemselectionmodel.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/qiterable.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/qiterator.h
+ mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/qjsonarray.h
+ mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/qjsonvalue.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/qlatin1stringview.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/qline.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/qlist.h
@@ -122,7 +129,9 @@ C:/Users/Wojtek/Documents/Baza_Danych/mainwindow.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/qtversionchecks.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/qtypeinfo.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/qtypes.h
+ mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/qurl.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/qutf8stringview.h
+ mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/quuid.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/qvariant.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/qvarlengtharray.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/qversiontagging.h
@@ -389,8 +398,10 @@ C:/Users/Wojtek/Documents/Baza_Danych/mainwindow.h
  mdp:C:/Users/Wojtek/Documents/Baza_Danych/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/Baza_Danych_autogen/moc_predefs.h
  mdp:C:/Users/Wojtek/Documents/Baza_Danych/film.h
  mdp:C:/Users/Wojtek/Documents/Baza_Danych/mainwindow.h
+C:/Users/Wojtek/Documents/Baza_Danych/database.h
 C:/Users/Wojtek/Documents/Baza_Danych/film.cpp
  uic:ui_mainwindow.h
 C:/Users/Wojtek/Documents/Baza_Danych/ksiazka.cpp
 C:/Users/Wojtek/Documents/Baza_Danych/mainwindow.cpp
  uic:ui_mainwindow.h
+C:/Users/Wojtek/Documents/Baza_Danych/database.cpp

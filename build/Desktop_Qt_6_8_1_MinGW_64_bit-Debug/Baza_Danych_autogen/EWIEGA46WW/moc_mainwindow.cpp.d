@@ -1,5 +1,6 @@
 C:/Users/Wojtek/Documents/Baza_Danych/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/Baza_Danych_autogen/EWIEGA46WW/moc_mainwindow.cpp: C:/Users/Wojtek/Documents/Baza_Danych/mainwindow.h \
   C:/Users/Wojtek/Documents/Baza_Danych/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/Baza_Danych_autogen/moc_predefs.h \
+  C:/Qt/6.8.1/mingw_64/include/QtCore/QJsonArray \
   C:/Qt/6.8.1/mingw_64/include/QtCore/q20functional.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/q20iterator.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/q20memory.h \
@@ -20,6 +21,9 @@ C:/Users/Wojtek/Documents/Baza_Danych/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/
   C:/Qt/6.8.1/mingw_64/include/QtCore/qbytearrayalgorithms.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qbytearraylist.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qbytearrayview.h \
+  C:/Qt/6.8.1/mingw_64/include/QtCore/qcalendar.h \
+  C:/Qt/6.8.1/mingw_64/include/QtCore/qcborcommon.h \
+  C:/Qt/6.8.1/mingw_64/include/QtCore/qcborvalue.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qchar.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qcompare.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qcompare_impl.h \
@@ -33,6 +37,7 @@ C:/Users/Wojtek/Documents/Baza_Danych/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/
   C:/Qt/6.8.1/mingw_64/include/QtCore/qcontiguouscache.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qdarwinhelpers.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qdatastream.h \
+  C:/Qt/6.8.1/mingw_64/include/QtCore/qdatetime.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qdebug.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qendian.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qexceptionhandling.h \
@@ -50,6 +55,8 @@ C:/Users/Wojtek/Documents/Baza_Danych/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/
   C:/Qt/6.8.1/mingw_64/include/QtCore/qitemselectionmodel.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qiterable.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qiterator.h \
+  C:/Qt/6.8.1/mingw_64/include/QtCore/qjsonarray.h \
+  C:/Qt/6.8.1/mingw_64/include/QtCore/qjsonvalue.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qlatin1stringview.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qline.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qlist.h \
@@ -118,7 +125,9 @@ C:/Users/Wojtek/Documents/Baza_Danych/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/
   C:/Qt/6.8.1/mingw_64/include/QtCore/qtversionchecks.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qtypeinfo.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qtypes.h \
+  C:/Qt/6.8.1/mingw_64/include/QtCore/qurl.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qutf8stringview.h \
+  C:/Qt/6.8.1/mingw_64/include/QtCore/quuid.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qvariant.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qvarlengtharray.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qversiontagging.h \

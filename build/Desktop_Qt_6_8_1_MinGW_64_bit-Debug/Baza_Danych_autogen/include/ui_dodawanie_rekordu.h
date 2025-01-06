@@ -10,19 +10,17 @@
 #define UI_DODAWANIE_REKORDU_H
 
 #include <QtCore/QVariant>
-#include <QtWidgets/QAbstractButton>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
-#include <QtWidgets/QDialogButtonBox>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
+#include <QtWidgets/QPushButton>
 
 QT_BEGIN_NAMESPACE
 
 class Ui_dodawanie_rekordu
 {
 public:
-    QDialogButtonBox *buttonBox;
     QLabel *label;
     QLabel *label_2;
     QLabel *label_3;
@@ -31,17 +29,14 @@ public:
     QLineEdit *tytul_edit;
     QLineEdit *rezyser_edit;
     QLineEdit *gatunek_edit;
+    QPushButton *pushButton_Dodaj;
+    QPushButton *pushButton_Porzuc;
 
     void setupUi(QDialog *dodawanie_rekordu)
     {
         if (dodawanie_rekordu->objectName().isEmpty())
             dodawanie_rekordu->setObjectName("dodawanie_rekordu");
         dodawanie_rekordu->resize(400, 300);
-        buttonBox = new QDialogButtonBox(dodawanie_rekordu);
-        buttonBox->setObjectName("buttonBox");
-        buttonBox->setGeometry(QRect(30, 240, 341, 32));
-        buttonBox->setOrientation(Qt::Orientation::Horizontal);
-        buttonBox->setStandardButtons(QDialogButtonBox::StandardButton::Cancel|QDialogButtonBox::StandardButton::Ok);
         label = new QLabel(dodawanie_rekordu);
         label->setObjectName("label");
         label->setGeometry(QRect(50, 30, 121, 16));
@@ -66,10 +61,14 @@ public:
         gatunek_edit = new QLineEdit(dodawanie_rekordu);
         gatunek_edit->setObjectName("gatunek_edit");
         gatunek_edit->setGeometry(QRect(160, 180, 113, 24));
+        pushButton_Dodaj = new QPushButton(dodawanie_rekordu);
+        pushButton_Dodaj->setObjectName("pushButton_Dodaj");
+        pushButton_Dodaj->setGeometry(QRect(180, 250, 80, 24));
+        pushButton_Porzuc = new QPushButton(dodawanie_rekordu);
+        pushButton_Porzuc->setObjectName("pushButton_Porzuc");
+        pushButton_Porzuc->setGeometry(QRect(280, 250, 80, 24));
 
         retranslateUi(dodawanie_rekordu);
-        QObject::connect(buttonBox, &QDialogButtonBox::accepted, dodawanie_rekordu, qOverload<>(&QDialog::accept));
-        QObject::connect(buttonBox, &QDialogButtonBox::rejected, dodawanie_rekordu, qOverload<>(&QDialog::reject));
 
         QMetaObject::connectSlotsByName(dodawanie_rekordu);
     } // setupUi
@@ -81,6 +80,8 @@ public:
         label_2->setText(QCoreApplication::translate("dodawanie_rekordu", "Tytu\305\202", nullptr));
         label_3->setText(QCoreApplication::translate("dodawanie_rekordu", "Re\305\274yser", nullptr));
         label_4->setText(QCoreApplication::translate("dodawanie_rekordu", "Gatunek", nullptr));
+        pushButton_Dodaj->setText(QCoreApplication::translate("dodawanie_rekordu", "Dodaj", nullptr));
+        pushButton_Porzuc->setText(QCoreApplication::translate("dodawanie_rekordu", "Porzu\304\207", nullptr));
     } // retranslateUi
 
 };

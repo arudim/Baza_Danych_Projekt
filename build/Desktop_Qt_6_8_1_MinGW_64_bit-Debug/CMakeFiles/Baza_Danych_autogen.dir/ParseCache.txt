@@ -533,7 +533,6 @@ C:/Users/Wojtek/Documents/Baza_Danych/mainwindow.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtGui/qwindowdefs_win.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtWidgets/QDialog
  mdp:C:/Qt/6.8.1/mingw_64/include/QtWidgets/QMainWindow
- mdp:C:/Qt/6.8.1/mingw_64/include/QtWidgets/QMessageBox
  mdp:C:/Qt/6.8.1/mingw_64/include/QtWidgets/QTableWidget
  mdp:C:/Qt/6.8.1/mingw_64/include/QtWidgets/qabstractitemdelegate.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtWidgets/qabstractitemview.h
@@ -541,10 +540,8 @@ C:/Users/Wojtek/Documents/Baza_Danych/mainwindow.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtWidgets/qabstractslider.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtWidgets/qabstractspinbox.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtWidgets/qdialog.h
- mdp:C:/Qt/6.8.1/mingw_64/include/QtWidgets/qdialogbuttonbox.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtWidgets/qframe.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtWidgets/qmainwindow.h
- mdp:C:/Qt/6.8.1/mingw_64/include/QtWidgets/qmessagebox.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtWidgets/qrubberband.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtWidgets/qsizepolicy.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtWidgets/qslider.h

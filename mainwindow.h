@@ -4,7 +4,6 @@
 #include <QMainWindow>
 #include "dodawanie_rekordu.h"
 #include <QTableWidget>
-#include <QMessageBox>
 #include <QJsonArray>
 #include "film.h"
 

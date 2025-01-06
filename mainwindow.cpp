@@ -3,6 +3,7 @@
 #include "ui_mainwindow.h"
 #include "film.h"
 #include <QJsonObject>
+#include <QMessageBox>
 #include <QJsonValue>
 #include <QString>
 #include "BazaDanych.h"
@@ -56,37 +57,13 @@ void MainWindow::updateTable() {
 }
 void MainWindow::on_Add_Button_clicked()
 {
-    BazaDanych &DB=BazaDanych::Instancja();
-    if (ui->lineEditYear->text().isEmpty() ||
-        ui->lineEditName->text().isEmpty() ||
-        ui->lineEditDirector->text().isEmpty() ||
-        ui->lineEditType->text().isEmpty())
-    {
-        QMessageBox::warning(this, "Błąd Danych", "Wszystkie pola muszą być wypełnione.");
-        return;
-    }
-    bool ok;
-    int year = ui->lineEditYear->text().toInt(&ok);
-
-    if (!ok) {
-        QMessageBox::warning(this, "Zła Dana", "Wprowadź 'int' dla danej Rok");
-        return;
-    }
-
-    DB.DodawnieRekordu(year, ui->lineEditName->text().toStdString().c_str(),
-            ui->lineEditDirector->text().toStdString().c_str(),
-            ui->lineEditType->text().toStdString().c_str());
-
-    updateTable();
 
 
-    //okno= new dodawanie_rekordu(this);
-    //okno->show();
 
-    ui->lineEditYear->clear();
-    ui->lineEditName->clear();
-    ui->lineEditDirector->clear();
-    ui->lineEditType->clear();
+    okno= new dodawanie_rekordu(this);
+    okno->show();
+
+
 }
 /*!
  * \brief MainWindow::on_Delete_Button_clicked

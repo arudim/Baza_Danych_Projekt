@@ -1,7 +1,6 @@
 C:/Users/Wojtek/Documents/Baza_Danych/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/Baza_Danych_autogen/EWIEGA46WW/moc_mainwindow.cpp: C:/Users/Wojtek/Documents/Baza_Danych/mainwindow.h \
   C:/Users/Wojtek/Documents/Baza_Danych/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/Baza_Danych_autogen/moc_predefs.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/QJsonArray \
-  C:/Qt/6.8.1/mingw_64/include/QtCore/QJsonObject \
   C:/Qt/6.8.1/mingw_64/include/QtCore/q20functional.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/q20iterator.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/q20memory.h \
@@ -57,7 +56,6 @@ C:/Users/Wojtek/Documents/Baza_Danych/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/
   C:/Qt/6.8.1/mingw_64/include/QtCore/qiterable.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qiterator.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qjsonarray.h \
-  C:/Qt/6.8.1/mingw_64/include/QtCore/qjsonobject.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qjsonvalue.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qlatin1stringview.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qline.h \
@@ -394,6 +392,5 @@ C:/Users/Wojtek/Documents/Baza_Danych/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/time.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h \
-  C:/Users/Wojtek/Documents/Baza_Danych/BazaDanych.h \
   C:/Users/Wojtek/Documents/Baza_Danych/dodawanie_rekordu.h \
   C:/Users/Wojtek/Documents/Baza_Danych/film.h

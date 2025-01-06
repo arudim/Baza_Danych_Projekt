@@ -2,6 +2,12 @@
 #include <QJsonObject>
 
 
+static BazaDanych instancja_bazy;
+
+BazaDanych& BazaDanych::Instancja(){
+    return instancja_bazy;
+}
+
 BazaDanych::BazaDanych() {
     id=0;
 }

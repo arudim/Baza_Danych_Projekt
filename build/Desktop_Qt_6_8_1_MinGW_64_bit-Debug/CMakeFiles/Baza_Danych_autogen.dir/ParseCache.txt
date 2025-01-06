@@ -373,7 +373,6 @@ C:/Users/Wojtek/Documents/Baza_Danych/ksiazka.h
 C:/Users/Wojtek/Documents/Baza_Danych/mainwindow.h
  mmc:Q_OBJECT
  mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/QJsonArray
- mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/QJsonObject
  mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/q20functional.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/q20iterator.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/q20memory.h
@@ -429,7 +428,6 @@ C:/Users/Wojtek/Documents/Baza_Danych/mainwindow.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/qiterable.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/qiterator.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/qjsonarray.h
- mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/qjsonobject.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/qjsonvalue.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/qlatin1stringview.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/qline.h
@@ -766,7 +764,6 @@ C:/Users/Wojtek/Documents/Baza_Danych/mainwindow.h
  mdp:C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/time.h
  mdp:C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h
  mdp:C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h
- mdp:C:/Users/Wojtek/Documents/Baza_Danych/bazadanych.h
  mdp:C:/Users/Wojtek/Documents/Baza_Danych/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/Baza_Danych_autogen/moc_predefs.h
  mdp:C:/Users/Wojtek/Documents/Baza_Danych/dodawanie_rekordu.h
  mdp:C:/Users/Wojtek/Documents/Baza_Danych/film.h

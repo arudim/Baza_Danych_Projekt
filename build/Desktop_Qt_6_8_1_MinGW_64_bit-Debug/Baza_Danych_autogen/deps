@@ -1,6 +1,5 @@
 Baza_Danych_autogen/timestamp: \
 	C:/Qt/6.8.1/mingw_64/include/QtCore/QJsonArray \
-	C:/Qt/6.8.1/mingw_64/include/QtCore/QJsonObject \
 	C:/Qt/6.8.1/mingw_64/include/QtCore/q20functional.h \
 	C:/Qt/6.8.1/mingw_64/include/QtCore/q20iterator.h \
 	C:/Qt/6.8.1/mingw_64/include/QtCore/q20memory.h \
@@ -56,7 +55,6 @@ Baza_Danych_autogen/timestamp: \
 	C:/Qt/6.8.1/mingw_64/include/QtCore/qiterable.h \
 	C:/Qt/6.8.1/mingw_64/include/QtCore/qiterator.h \
 	C:/Qt/6.8.1/mingw_64/include/QtCore/qjsonarray.h \
-	C:/Qt/6.8.1/mingw_64/include/QtCore/qjsonobject.h \
 	C:/Qt/6.8.1/mingw_64/include/QtCore/qjsonvalue.h \
 	C:/Qt/6.8.1/mingw_64/include/QtCore/qlatin1stringview.h \
 	C:/Qt/6.8.1/mingw_64/include/QtCore/qline.h \
@@ -566,7 +564,6 @@ Baza_Danych_autogen/timestamp: \
 	C:/Users/Wojtek/Documents/Baza_Danych/BazaDanych.cpp \
 	C:/Users/Wojtek/Documents/Baza_Danych/BazaDanych.h \
 	C:/Users/Wojtek/Documents/Baza_Danych/CMakeLists.txt \
-	C:/Users/Wojtek/Documents/Baza_Danych/bazadanych.h \
 	C:/Users/Wojtek/Documents/Baza_Danych/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/.qtc/package-manager/auto-setup.cmake \
 	C:/Users/Wojtek/Documents/Baza_Danych/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/Baza_Danych_autogen/moc_predefs.h \
 	C:/Users/Wojtek/Documents/Baza_Danych/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/CMakeFiles/3.29.3/CMakeCXXCompiler.cmake \

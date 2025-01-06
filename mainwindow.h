@@ -7,7 +7,7 @@
 #include <QMessageBox>
 #include <QJsonArray>
 #include "film.h"
-#include "BazaDanych.h"
+
 
 
 namespace Ui {
@@ -26,12 +26,11 @@ public:
     ~MainWindow();
 
     Ui::MainWindow *ui;
-    void updateTable(std::vector<Film1> &f);
+    void updateTable();
     void header_clicked();
     static int id;
     int kolumna_sortowania=0;
     dodawanie_rekordu *okno;
-    BazaDanych DB;
 private slots:
     void on_Add_Button_clicked();
     void on_Delete_Button_clicked();

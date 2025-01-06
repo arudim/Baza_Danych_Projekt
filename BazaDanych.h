@@ -4,6 +4,8 @@
 #include <QJsonArray>
 class BazaDanych
 {
+private:
+
 public:
     BazaDanych();
 

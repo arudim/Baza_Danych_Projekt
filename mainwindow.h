@@ -5,7 +5,6 @@
 #include "dodawanie_rekordu.h"
 #include <QTableWidget>
 #include <QJsonArray>
-#include "film.h"
 
 
 
@@ -26,8 +25,6 @@ public:
 
     Ui::MainWindow *ui;
     void updateTable();
-    void header_clicked();
-    static int id;
     int kolumna_sortowania=0;
     dodawanie_rekordu *okno;
 private slots:

@@ -73,25 +73,9 @@ build CMakeFiles/Baza_Danych.dir/mainwindow.cpp.obj: CXX_COMPILER__Baza_Danych_u
   OBJECT_DIR = CMakeFiles\Baza_Danych.dir
   OBJECT_FILE_DIR = CMakeFiles\Baza_Danych.dir
 
-build CMakeFiles/Baza_Danych.dir/ksiazka.cpp.obj: CXX_COMPILER__Baza_Danych_unscanned_Debug C$:/Users/Wojtek/Documents/Baza_Danych/ksiazka.cpp || cmake_object_order_depends_target_Baza_Danych
+build CMakeFiles/Baza_Danych.dir/bazadanych.cpp.obj: CXX_COMPILER__Baza_Danych_unscanned_Debug C$:/Users/Wojtek/Documents/Baza_Danych/bazadanych.cpp || cmake_object_order_depends_target_Baza_Danych
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\Baza_Danych.dir\ksiazka.cpp.obj.d
-  FLAGS = -DQT_QML_DEBUG -g -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/Wojtek/Documents/Baza_Danych/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/Baza_Danych_autogen/include -isystem C:/Qt/6.8.1/mingw_64/include/QtCore -isystem C:/Qt/6.8.1/mingw_64/include -isystem C:/Qt/6.8.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.8.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.8.1/mingw_64/include/QtGui
-  OBJECT_DIR = CMakeFiles\Baza_Danych.dir
-  OBJECT_FILE_DIR = CMakeFiles\Baza_Danych.dir
-
-build CMakeFiles/Baza_Danych.dir/film.cpp.obj: CXX_COMPILER__Baza_Danych_unscanned_Debug C$:/Users/Wojtek/Documents/Baza_Danych/film.cpp || cmake_object_order_depends_target_Baza_Danych
-  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\Baza_Danych.dir\film.cpp.obj.d
-  FLAGS = -DQT_QML_DEBUG -g -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/Wojtek/Documents/Baza_Danych/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/Baza_Danych_autogen/include -isystem C:/Qt/6.8.1/mingw_64/include/QtCore -isystem C:/Qt/6.8.1/mingw_64/include -isystem C:/Qt/6.8.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.8.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.8.1/mingw_64/include/QtGui
-  OBJECT_DIR = CMakeFiles\Baza_Danych.dir
-  OBJECT_FILE_DIR = CMakeFiles\Baza_Danych.dir
-
-build CMakeFiles/Baza_Danych.dir/BazaDanych.cpp.obj: CXX_COMPILER__Baza_Danych_unscanned_Debug C$:/Users/Wojtek/Documents/Baza_Danych/BazaDanych.cpp || cmake_object_order_depends_target_Baza_Danych
-  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\Baza_Danych.dir\BazaDanych.cpp.obj.d
+  DEP_FILE = CMakeFiles\Baza_Danych.dir\bazadanych.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -fdiagnostics-color=always
   INCLUDES = -IC:/Users/Wojtek/Documents/Baza_Danych/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/Baza_Danych_autogen/include -isystem C:/Qt/6.8.1/mingw_64/include/QtCore -isystem C:/Qt/6.8.1/mingw_64/include -isystem C:/Qt/6.8.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.8.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.8.1/mingw_64/include/QtGui
   OBJECT_DIR = CMakeFiles\Baza_Danych.dir
@@ -113,7 +97,7 @@ build CMakeFiles/Baza_Danych.dir/dodawanie_rekordu.cpp.obj: CXX_COMPILER__Baza_D
 #############################################
 # Link the executable Baza_Danych.exe
 
-build Baza_Danych.exe: CXX_EXECUTABLE_LINKER__Baza_Danych_Debug CMakeFiles/Baza_Danych.dir/Baza_Danych_autogen/mocs_compilation.cpp.obj CMakeFiles/Baza_Danych.dir/main.cpp.obj CMakeFiles/Baza_Danych.dir/mainwindow.cpp.obj CMakeFiles/Baza_Danych.dir/ksiazka.cpp.obj CMakeFiles/Baza_Danych.dir/film.cpp.obj CMakeFiles/Baza_Danych.dir/BazaDanych.cpp.obj CMakeFiles/Baza_Danych.dir/dodawanie_rekordu.cpp.obj | C$:/Qt/6.8.1/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.8.1/mingw_64/lib/libQt6Gui.a C$:/Qt/6.8.1/mingw_64/lib/libQt6Core.a C$:/Qt/6.8.1/mingw_64/lib/libQt6EntryPoint.a || Baza_Danych_autogen Baza_Danych_autogen_timestamp_deps
+build Baza_Danych.exe: CXX_EXECUTABLE_LINKER__Baza_Danych_Debug CMakeFiles/Baza_Danych.dir/Baza_Danych_autogen/mocs_compilation.cpp.obj CMakeFiles/Baza_Danych.dir/main.cpp.obj CMakeFiles/Baza_Danych.dir/mainwindow.cpp.obj CMakeFiles/Baza_Danych.dir/bazadanych.cpp.obj CMakeFiles/Baza_Danych.dir/dodawanie_rekordu.cpp.obj | C$:/Qt/6.8.1/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.8.1/mingw_64/lib/libQt6Gui.a C$:/Qt/6.8.1/mingw_64/lib/libQt6Core.a C$:/Qt/6.8.1/mingw_64/lib/libQt6EntryPoint.a || Baza_Danych_autogen Baza_Danych_autogen_timestamp_deps
   FLAGS = -DQT_QML_DEBUG -g
   LINK_FLAGS = -mwindows
   LINK_LIBRARIES = C:/Qt/6.8.1/mingw_64/lib/libQt6Widgets.a  C:/Qt/6.8.1/mingw_64/lib/libQt6Gui.a  C:/Qt/6.8.1/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -lmingw32  C:/Qt/6.8.1/mingw_64/lib/libQt6EntryPoint.a  -lshell32  -ld3d11  -ldxgi  -ldxguid  -ld3d12  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32

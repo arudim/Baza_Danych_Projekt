@@ -11,8 +11,8 @@ qt_add_executable(Baza_Danych
     mainwindow.cpp
     mainwindow.h
     mainwindow.ui
-    ksiazka.h ksiazka.cpp
-    film.h film.cpp
+
+
     BazaDanych.h BazaDanych.cpp
     dodawanie_rekordu.h dodawanie_rekordu.cpp dodawanie_rekordu.ui
 

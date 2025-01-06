@@ -230,9 +230,15 @@
 	"HEADERS" : 
 	[
 		[
-			"C:/Users/Wojtek/Documents/Baza_Danych/database.h",
+			"C:/Users/Wojtek/Documents/Baza_Danych/BazaDanych.h",
 			"MU",
-			"EWIEGA46WW/moc_database.cpp",
+			"EWIEGA46WW/moc_BazaDanych.cpp",
+			null
+		],
+		[
+			"C:/Users/Wojtek/Documents/Baza_Danych/dodawanie_rekordu.h",
+			"MU",
+			"EWIEGA46WW/moc_dodawanie_rekordu.cpp",
 			null
 		],
 		[
@@ -324,7 +330,12 @@
 	"SETTINGS_FILE" : "C:/Users/Wojtek/Documents/Baza_Danych/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/CMakeFiles/Baza_Danych_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
-		[ "C:/Users/Wojtek/Documents/Baza_Danych/database.cpp", "MU", null ],
+		[ "C:/Users/Wojtek/Documents/Baza_Danych/BazaDanych.cpp", "MU", null ],
+		[
+			"C:/Users/Wojtek/Documents/Baza_Danych/dodawanie_rekordu.cpp",
+			"MU",
+			null
+		],
 		[ "C:/Users/Wojtek/Documents/Baza_Danych/film.cpp", "MU", null ],
 		[ "C:/Users/Wojtek/Documents/Baza_Danych/ksiazka.cpp", "MU", null ],
 		[ "C:/Users/Wojtek/Documents/Baza_Danych/main.cpp", "MU", null ],

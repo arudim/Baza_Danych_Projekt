@@ -38,7 +38,7 @@ public:
     QLabel *label_2;
     QLabel *label_3;
     QLabel *label_4;
-    QPushButton *pushButton;
+    QPushButton *Sort_Button;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -82,9 +82,9 @@ public:
         label_4 = new QLabel(centralwidget);
         label_4->setObjectName("label_4");
         label_4->setGeometry(QRect(480, 50, 49, 16));
-        pushButton = new QPushButton(centralwidget);
-        pushButton->setObjectName("pushButton");
-        pushButton->setGeometry(QRect(40, 260, 80, 24));
+        Sort_Button = new QPushButton(centralwidget);
+        Sort_Button->setObjectName("Sort_Button");
+        Sort_Button->setGeometry(QRect(40, 260, 80, 24));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
@@ -108,7 +108,7 @@ public:
         label_2->setText(QCoreApplication::translate("MainWindow", "Nazwa", nullptr));
         label_3->setText(QCoreApplication::translate("MainWindow", "Re\305\274yser", nullptr));
         label_4->setText(QCoreApplication::translate("MainWindow", "Typ", nullptr));
-        pushButton->setText(QCoreApplication::translate("MainWindow", "Sort", nullptr));
+        Sort_Button->setText(QCoreApplication::translate("MainWindow", "Sort", nullptr));
     } // retranslateUi
 
 };

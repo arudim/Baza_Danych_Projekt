@@ -1,13 +1,10 @@
-C:/Users/Wojtek/Documents/Baza_Danych/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/Baza_Danych_autogen/EWIEGA46WW/moc_mainwindow.cpp: C:/Users/Wojtek/Documents/Baza_Danych/mainwindow.h \
+C:/Users/Wojtek/Documents/Baza_Danych/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/Baza_Danych_autogen/EWIEGA46WW/moc_dodawanie_rekordu.cpp: C:/Users/Wojtek/Documents/Baza_Danych/dodawanie_rekordu.h \
   C:/Users/Wojtek/Documents/Baza_Danych/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/Baza_Danych_autogen/moc_predefs.h \
-  C:/Qt/6.8.1/mingw_64/include/QtCore/QJsonArray \
-  C:/Qt/6.8.1/mingw_64/include/QtCore/QJsonObject \
   C:/Qt/6.8.1/mingw_64/include/QtCore/q20functional.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/q20iterator.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/q20memory.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/q20type_traits.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/q23utility.h \
-  C:/Qt/6.8.1/mingw_64/include/QtCore/qabstractitemmodel.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qalgorithms.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qanystringview.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qarraydata.h \
@@ -22,9 +19,6 @@ C:/Users/Wojtek/Documents/Baza_Danych/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/
   C:/Qt/6.8.1/mingw_64/include/QtCore/qbytearrayalgorithms.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qbytearraylist.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qbytearrayview.h \
-  C:/Qt/6.8.1/mingw_64/include/QtCore/qcalendar.h \
-  C:/Qt/6.8.1/mingw_64/include/QtCore/qcborcommon.h \
-  C:/Qt/6.8.1/mingw_64/include/QtCore/qcborvalue.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qchar.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qcompare.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qcompare_impl.h \
@@ -38,7 +32,6 @@ C:/Users/Wojtek/Documents/Baza_Danych/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/
   C:/Qt/6.8.1/mingw_64/include/QtCore/qcontiguouscache.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qdarwinhelpers.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qdatastream.h \
-  C:/Qt/6.8.1/mingw_64/include/QtCore/qdatetime.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qdebug.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qendian.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qexceptionhandling.h \
@@ -53,16 +46,11 @@ C:/Users/Wojtek/Documents/Baza_Danych/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/
   C:/Qt/6.8.1/mingw_64/include/QtCore/qhash.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qhashfunctions.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qiodevicebase.h \
-  C:/Qt/6.8.1/mingw_64/include/QtCore/qitemselectionmodel.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qiterable.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qiterator.h \
-  C:/Qt/6.8.1/mingw_64/include/QtCore/qjsonarray.h \
-  C:/Qt/6.8.1/mingw_64/include/QtCore/qjsonobject.h \
-  C:/Qt/6.8.1/mingw_64/include/QtCore/qjsonvalue.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qlatin1stringview.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qline.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qlist.h \
-  C:/Qt/6.8.1/mingw_64/include/QtCore/qlocale.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qlogging.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qmalloc.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qmap.h \
@@ -83,7 +71,6 @@ C:/Users/Wojtek/Documents/Baza_Danych/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/
   C:/Qt/6.8.1/mingw_64/include/QtCore/qprocessordetection.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qrect.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qrefcount.h \
-  C:/Qt/6.8.1/mingw_64/include/QtCore/qregularexpression.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qscopedpointer.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qscopeguard.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qset.h \
@@ -127,9 +114,7 @@ C:/Users/Wojtek/Documents/Baza_Danych/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/
   C:/Qt/6.8.1/mingw_64/include/QtCore/qtversionchecks.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qtypeinfo.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qtypes.h \
-  C:/Qt/6.8.1/mingw_64/include/QtCore/qurl.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qutf8stringview.h \
-  C:/Qt/6.8.1/mingw_64/include/QtCore/quuid.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qvariant.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qvarlengtharray.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qversiontagging.h \
@@ -158,32 +143,11 @@ C:/Users/Wojtek/Documents/Baza_Danych/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/
   C:/Qt/6.8.1/mingw_64/include/QtGui/qtguiexports.h \
   C:/Qt/6.8.1/mingw_64/include/QtGui/qtguiglobal.h \
   C:/Qt/6.8.1/mingw_64/include/QtGui/qtransform.h \
-  C:/Qt/6.8.1/mingw_64/include/QtGui/qvalidator.h \
   C:/Qt/6.8.1/mingw_64/include/QtGui/qwindowdefs.h \
   C:/Qt/6.8.1/mingw_64/include/QtGui/qwindowdefs_win.h \
   C:/Qt/6.8.1/mingw_64/include/QtWidgets/QDialog \
-  C:/Qt/6.8.1/mingw_64/include/QtWidgets/QMainWindow \
-  C:/Qt/6.8.1/mingw_64/include/QtWidgets/QMessageBox \
-  C:/Qt/6.8.1/mingw_64/include/QtWidgets/QTableWidget \
-  C:/Qt/6.8.1/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
-  C:/Qt/6.8.1/mingw_64/include/QtWidgets/qabstractitemview.h \
-  C:/Qt/6.8.1/mingw_64/include/QtWidgets/qabstractscrollarea.h \
-  C:/Qt/6.8.1/mingw_64/include/QtWidgets/qabstractslider.h \
-  C:/Qt/6.8.1/mingw_64/include/QtWidgets/qabstractspinbox.h \
   C:/Qt/6.8.1/mingw_64/include/QtWidgets/qdialog.h \
-  C:/Qt/6.8.1/mingw_64/include/QtWidgets/qdialogbuttonbox.h \
-  C:/Qt/6.8.1/mingw_64/include/QtWidgets/qframe.h \
-  C:/Qt/6.8.1/mingw_64/include/QtWidgets/qmainwindow.h \
-  C:/Qt/6.8.1/mingw_64/include/QtWidgets/qmessagebox.h \
-  C:/Qt/6.8.1/mingw_64/include/QtWidgets/qrubberband.h \
   C:/Qt/6.8.1/mingw_64/include/QtWidgets/qsizepolicy.h \
-  C:/Qt/6.8.1/mingw_64/include/QtWidgets/qslider.h \
-  C:/Qt/6.8.1/mingw_64/include/QtWidgets/qstyle.h \
-  C:/Qt/6.8.1/mingw_64/include/QtWidgets/qstyleoption.h \
-  C:/Qt/6.8.1/mingw_64/include/QtWidgets/qtabbar.h \
-  C:/Qt/6.8.1/mingw_64/include/QtWidgets/qtableview.h \
-  C:/Qt/6.8.1/mingw_64/include/QtWidgets/qtablewidget.h \
-  C:/Qt/6.8.1/mingw_64/include/QtWidgets/qtabwidget.h \
   C:/Qt/6.8.1/mingw_64/include/QtWidgets/qtwidgets-config.h \
   C:/Qt/6.8.1/mingw_64/include/QtWidgets/qtwidgetsexports.h \
   C:/Qt/6.8.1/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
@@ -393,7 +357,4 @@ C:/Users/Wojtek/Documents/Baza_Danych/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/sys/types.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/time.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h \
-  C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h \
-  C:/Users/Wojtek/Documents/Baza_Danych/BazaDanych.h \
-  C:/Users/Wojtek/Documents/Baza_Danych/dodawanie_rekordu.h \
-  C:/Users/Wojtek/Documents/Baza_Danych/film.h
+  C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h

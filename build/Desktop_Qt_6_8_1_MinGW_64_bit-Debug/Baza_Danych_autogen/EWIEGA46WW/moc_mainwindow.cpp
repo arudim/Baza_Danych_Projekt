@@ -41,7 +41,7 @@ static constexpr auto qt_meta_stringdata_ZN10MainWindowE = QtMocHelpers::stringD
     "on_Add_Button_clicked",
     "",
     "on_Delete_Button_clicked",
-    "on_pushButton_clicked"
+    "on_Sort_Button_clicked"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -86,7 +86,7 @@ Q_CONSTINIT const QMetaObject MainWindow::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_Delete_Button_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'on_pushButton_clicked'
+        // method 'on_Sort_Button_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -99,7 +99,7 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         switch (_id) {
         case 0: _t->on_Add_Button_clicked(); break;
         case 1: _t->on_Delete_Button_clicked(); break;
-        case 2: _t->on_pushButton_clicked(); break;
+        case 2: _t->on_Sort_Button_clicked(); break;
         default: ;
         }
     }

@@ -1,14 +1,18 @@
 #include "mainwindow.h"
+#include "dodawanie_rekordu.h"
 #include "ui_mainwindow.h"
 #include "film.h"
 #include <QJsonObject>
 #include <QJsonValue>
 #include <QString>
+#include "BazaDanych.h"
 
 MainWindow* mainWindowInstance = nullptr;
 extern std::vector<Film1> f;
 int MainWindow::id=0;
 QJsonObject rekord;
+QJsonArray db;
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -41,14 +45,20 @@ void MainWindow::updateTable(std::vector<Film1> &f) {
         ui->tableWidget->setItem(i, 2, new QTableWidgetItem(QString::fromStdString(f[i].director)));
         ui->tableWidget->setItem(i, 3, new QTableWidgetItem(QString::fromStdString(f[i].type)));
     }*/
+    QJsonObject r;
+    auto tw=ui->tableWidget;
     ui->tableWidget->setRowCount(db.size());
-    for (int i =0; i<db.size();i++){
-        QJsonValue r=db[i];
-        ui->tableWidget->setItem(i, 0, new QTableWidgetItem(QString::number(r.toObject()["id"].toInt())));
-        ui->tableWidget->setItem(i, 1, new QTableWidgetItem(QString::number(r.toObject()["rok"].toInt())));
-        ui->tableWidget->setItem(i, 2, new QTableWidgetItem(r.toObject()["tytul"].toString()));
-        ui->tableWidget->setItem(i, 3, new QTableWidgetItem(r.toObject()["rezyser"].toString()));
-        ui->tableWidget->setItem(i, 4, new QTableWidgetItem(r.toObject()["rodzaj"].toString()));
+    for (int i =0; ;i++){
+        r=DB.DajRekord(i);
+        if(r.isEmpty()){
+            break;
+        }
+        ui->tableWidget->setRowCount(i+1);
+        ui->tableWidget->setItem(i, 0, new QTableWidgetItem(QString::number(r["id"].toInt())));
+        ui->tableWidget->setItem(i, 1, new QTableWidgetItem(QString::number(r["rok"].toInt())));
+        ui->tableWidget->setItem(i, 2, new QTableWidgetItem(r["tytul"].toString()));
+        ui->tableWidget->setItem(i, 3, new QTableWidgetItem(r["rezyser"].toString()));
+        ui->tableWidget->setItem(i, 4, new QTableWidgetItem(r["rodzaj"].toString()));
     }
         ui->tableWidget->sortByColumn(kolumna_sortowania,Qt::AscendingOrder);
 }
@@ -62,7 +72,6 @@ void MainWindow::on_Add_Button_clicked()
         QMessageBox::warning(this, "Błąd Danych", "Wszystkie pola muszą być wypełnione.");
         return;
     }
-
     bool ok;
     int year = ui->lineEditYear->text().toInt(&ok);
 
@@ -71,17 +80,15 @@ void MainWindow::on_Add_Button_clicked()
         return;
     }
 
-    addFilm(year, ui->lineEditName->text().toStdString(),
-            ui->lineEditDirector->text().toStdString(),
-            ui->lineEditType->text().toStdString());
-    rekord["id"]= id++;
-    rekord["rok"] = year;
-    rekord["tytul"] = ui->lineEditName->text().toStdString().c_str();
-    rekord["rezyser"] = ui->lineEditDirector->text().toStdString().c_str();
-    rekord["rodzaj"] = ui->lineEditType->text().toStdString().c_str();
-    db.append(rekord);
+    DB.DodawnieRekordu(year, ui->lineEditName->text().toStdString().c_str(),
+            ui->lineEditDirector->text().toStdString().c_str(),
+            ui->lineEditType->text().toStdString().c_str());
+
     updateTable(f);
 
+
+    //okno= new dodawanie_rekordu(this);
+    //okno->show();
 
     ui->lineEditYear->clear();
     ui->lineEditName->clear();
@@ -97,10 +104,10 @@ void MainWindow::on_Delete_Button_clicked()
     if (!selectedItems.isEmpty()) {
         int row = ui->tableWidget->row(selectedItems.first());
         QTableWidgetItem *ti=ui->tableWidget->item(row,0);
-        auto d=ti->data(0);
+        int d=ti->data(0).toInt();
         //deleteFilm(row);
 
-        db.removeAt(row);
+        DB.KasowanieRekordu(d);
         updateTable(f);
     }
     else{
@@ -110,7 +117,10 @@ void MainWindow::on_Delete_Button_clicked()
 }
 
 
-void MainWindow::on_pushButton_clicked()
+
+
+
+void MainWindow::on_Sort_Button_clicked()
 {
     auto selectedItems = ui->tableWidget->selectedItems();
     if (!selectedItems.isEmpty()) {

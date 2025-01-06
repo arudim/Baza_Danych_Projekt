@@ -1,10 +1,10 @@
 #include "film.h"
-#include "mainwindow.h"
-#include "ui_mainwindow.h"
+
+
 
 std::vector<Film1> f;
 
-extern MainWindow* mainWindowInstance;
+
 
 void addFilm(int year, const std::string &name, const std::string &director, const std::string &type) {
     Film1 a;
@@ -21,6 +21,10 @@ void deleteFilm(int index) {
         f.erase(f.begin() + index);
 
     }
+}
+
+void kupe(){
+
 }
 
 

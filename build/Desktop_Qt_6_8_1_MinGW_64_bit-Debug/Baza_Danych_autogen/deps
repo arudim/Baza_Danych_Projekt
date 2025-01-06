@@ -1,5 +1,6 @@
 Baza_Danych_autogen/timestamp: \
 	C:/Qt/6.8.1/mingw_64/include/QtCore/QJsonArray \
+	C:/Qt/6.8.1/mingw_64/include/QtCore/QJsonObject \
 	C:/Qt/6.8.1/mingw_64/include/QtCore/q20functional.h \
 	C:/Qt/6.8.1/mingw_64/include/QtCore/q20iterator.h \
 	C:/Qt/6.8.1/mingw_64/include/QtCore/q20memory.h \
@@ -55,6 +56,7 @@ Baza_Danych_autogen/timestamp: \
 	C:/Qt/6.8.1/mingw_64/include/QtCore/qiterable.h \
 	C:/Qt/6.8.1/mingw_64/include/QtCore/qiterator.h \
 	C:/Qt/6.8.1/mingw_64/include/QtCore/qjsonarray.h \
+	C:/Qt/6.8.1/mingw_64/include/QtCore/qjsonobject.h \
 	C:/Qt/6.8.1/mingw_64/include/QtCore/qjsonvalue.h \
 	C:/Qt/6.8.1/mingw_64/include/QtCore/qlatin1stringview.h \
 	C:/Qt/6.8.1/mingw_64/include/QtCore/qline.h \
@@ -158,6 +160,7 @@ Baza_Danych_autogen/timestamp: \
 	C:/Qt/6.8.1/mingw_64/include/QtGui/qvalidator.h \
 	C:/Qt/6.8.1/mingw_64/include/QtGui/qwindowdefs.h \
 	C:/Qt/6.8.1/mingw_64/include/QtGui/qwindowdefs_win.h \
+	C:/Qt/6.8.1/mingw_64/include/QtWidgets/QDialog \
 	C:/Qt/6.8.1/mingw_64/include/QtWidgets/QMainWindow \
 	C:/Qt/6.8.1/mingw_64/include/QtWidgets/QMessageBox \
 	C:/Qt/6.8.1/mingw_64/include/QtWidgets/QTableWidget \
@@ -560,14 +563,17 @@ Baza_Danych_autogen/timestamp: \
 	C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/time.h \
 	C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h \
 	C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h \
+	C:/Users/Wojtek/Documents/Baza_Danych/BazaDanych.cpp \
+	C:/Users/Wojtek/Documents/Baza_Danych/BazaDanych.h \
 	C:/Users/Wojtek/Documents/Baza_Danych/CMakeLists.txt \
+	C:/Users/Wojtek/Documents/Baza_Danych/bazadanych.h \
 	C:/Users/Wojtek/Documents/Baza_Danych/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/.qtc/package-manager/auto-setup.cmake \
 	C:/Users/Wojtek/Documents/Baza_Danych/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/Baza_Danych_autogen/moc_predefs.h \
 	C:/Users/Wojtek/Documents/Baza_Danych/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/CMakeFiles/3.29.3/CMakeCXXCompiler.cmake \
 	C:/Users/Wojtek/Documents/Baza_Danych/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/CMakeFiles/3.29.3/CMakeRCCompiler.cmake \
 	C:/Users/Wojtek/Documents/Baza_Danych/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/CMakeFiles/3.29.3/CMakeSystem.cmake \
-	C:/Users/Wojtek/Documents/Baza_Danych/database.cpp \
-	C:/Users/Wojtek/Documents/Baza_Danych/database.h \
+	C:/Users/Wojtek/Documents/Baza_Danych/dodawanie_rekordu.cpp \
+	C:/Users/Wojtek/Documents/Baza_Danych/dodawanie_rekordu.h \
 	C:/Users/Wojtek/Documents/Baza_Danych/film.cpp \
 	C:/Users/Wojtek/Documents/Baza_Danych/film.h \
 	C:/Users/Wojtek/Documents/Baza_Danych/ksiazka.cpp \
@@ -575,5 +581,6 @@ Baza_Danych_autogen/timestamp: \
 	C:/Users/Wojtek/Documents/Baza_Danych/main.cpp \
 	C:/Users/Wojtek/Documents/Baza_Danych/mainwindow.cpp \
 	C:/Users/Wojtek/Documents/Baza_Danych/mainwindow.h \
+	C:/Users/Wojtek/Documents/Baza_Danych/dodawanie_rekordu.ui \
 	C:/Users/Wojtek/Documents/Baza_Danych/mainwindow.ui \
 	C:/Qt/Tools/CMake_64/bin/cmake.exe

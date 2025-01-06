@@ -7,7 +7,7 @@
 				{
 					"build" : ".",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-Debug-1c7795b018d1293e9e94.json",
+					"jsonFile" : "directory-.-Debug-c03790ba911bb0067412.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.16"
@@ -44,7 +44,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "Baza_Danych::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Baza_Danych-Debug-60599b0960dbb59484f4.json",
+					"jsonFile" : "target-Baza_Danych-Debug-312dcc25ed9a1ffad7ba.json",
 					"name" : "Baza_Danych",
 					"projectIndex" : 0
 				},

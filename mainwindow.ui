@@ -142,7 +142,7 @@
      <string>Typ</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="Sort_Button">
     <property name="geometry">
      <rect>
       <x>40</x>

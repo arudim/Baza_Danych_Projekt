@@ -10,10 +10,16 @@ Edit::Edit(QWidget *parent)
     ,mw((MainWindow*) parent)
 {
     ui->setupUi(this);
-    ui->rok_prod_edit->setText(QString::number(mw->edit_rok));
-    ui->tytul_edit->setText(mw->edit_tytul);
-    ui->rezyser_edit->setText(mw->edit_rezyser);
-    ui->gatunek_edit->setText(mw->edit_gatunek);
+    BazaDanych &DB=BazaDanych::Instancja();
+    QJsonObject r=DB.DajRekord(mw->edit_id);
+    int edit_rok=r["rok"].toInt();
+    QString edit_tytul=r["tytul"].toString();
+    QString edit_rezyser=r["rezyser"].toString();
+    QString edit_gatunek=r["rodzaj"].toString();
+    ui->rok_prod_edit->setText(QString::number(edit_rok));
+    ui->tytul_edit->setText(edit_tytul);
+    ui->rezyser_edit->setText(edit_rezyser);
+    ui->gatunek_edit->setText(edit_gatunek);
 }
 
 Edit::~Edit()

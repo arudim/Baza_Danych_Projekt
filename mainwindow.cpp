@@ -112,17 +112,11 @@ void MainWindow::on_Refresh_Button_clicked()
 
 void MainWindow::on_Edit_Button_clicked()
 {
-    BazaDanych &DB=BazaDanych::Instancja();
     auto selectedItems = ui->tableWidget->selectedItems();
     if (!selectedItems.isEmpty()) {
         int row = ui->tableWidget->row(selectedItems.first());
         QTableWidgetItem *ti=ui->tableWidget->item(row,0);
         edit_id=ti->data(0).toInt();
-        QJsonObject r=DB.DajRekord(edit_id);
-        edit_rok=r["rok"].toInt();
-        edit_tytul=r["tytul"].toString();
-        edit_rezyser=r["rezyser"].toString();
-        edit_gatunek=r["rodzaj"].toString();
     }
     okno2 = new Edit(this);
     okno2->show();

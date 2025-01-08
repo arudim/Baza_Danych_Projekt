@@ -1,8 +1,6 @@
 #include "BazaDanych.h"
 #include <QJsonObject>
-
-
-
+#include <QFile>
 static BazaDanych instancja_bazy;
 
 BazaDanych& BazaDanych::Instancja(){
@@ -55,4 +53,5 @@ void BazaDanych::EdytowanieRekordu(int _id, int _rok, QString _tytul, QString _r
     rekord["rodzaj"] = _gatunek;
     db.replace(_id,rekord);
 }
+
 

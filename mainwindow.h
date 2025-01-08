@@ -28,10 +28,6 @@ public:
     void updateTable();
     int kolumna_sortowania=0;
     int edit_id=0;
-    int edit_rok=0;
-    QString edit_tytul;
-    QString edit_rezyser;
-    QString edit_gatunek;
     dodawanie_rekordu *okno;
     Edit *okno2;
 

@@ -2,6 +2,7 @@
 #include <QJsonObject>
 
 
+
 static BazaDanych instancja_bazy;
 
 BazaDanych& BazaDanych::Instancja(){
@@ -13,7 +14,6 @@ BazaDanych::BazaDanych() {
 }
 
 QString BazaDanych::DodawnieRekordu(int _rok, QString _tytul, QString _rezyser, QString _gatunek){
-
     QString ret="";
     QJsonObject rekord;
 
@@ -25,11 +25,13 @@ QString BazaDanych::DodawnieRekordu(int _rok, QString _tytul, QString _rezyser, 
     db.append(rekord);
     return ret;
 }
+
 void BazaDanych::KasowanieRekordu(int _id){
     for(int i =0; i<db.size();i++){
         if(db[i].toObject()["id"]==_id){
             db.removeAt(i);
             break;
+
         }
     }
 }
@@ -44,3 +46,13 @@ QJsonObject BazaDanych::DajRekord(int _index){
     }
     return ret;
 }
+
+void BazaDanych::EdytowanieRekordu(int _id, int _rok, QString _tytul, QString _rezyser, QString _gatunek){
+    QJsonObject rekord=DajRekord(_id);
+    rekord["rok"] = _rok;
+    rekord["tytul"] = _tytul;
+    rekord["rezyser"] = _rezyser;
+    rekord["rodzaj"] = _gatunek;
+    db.replace(_id,rekord);
+}
+

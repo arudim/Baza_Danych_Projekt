@@ -36,37 +36,37 @@ public:
     {
         if (dodawanie_rekordu->objectName().isEmpty())
             dodawanie_rekordu->setObjectName("dodawanie_rekordu");
-        dodawanie_rekordu->resize(400, 300);
+        dodawanie_rekordu->resize(278, 249);
         label = new QLabel(dodawanie_rekordu);
         label->setObjectName("label");
-        label->setGeometry(QRect(50, 30, 121, 16));
+        label->setGeometry(QRect(20, 10, 121, 16));
         label_2 = new QLabel(dodawanie_rekordu);
         label_2->setObjectName("label_2");
-        label_2->setGeometry(QRect(50, 80, 49, 16));
+        label_2->setGeometry(QRect(20, 60, 49, 16));
         label_3 = new QLabel(dodawanie_rekordu);
         label_3->setObjectName("label_3");
-        label_3->setGeometry(QRect(50, 130, 49, 16));
+        label_3->setGeometry(QRect(20, 110, 49, 16));
         label_4 = new QLabel(dodawanie_rekordu);
         label_4->setObjectName("label_4");
-        label_4->setGeometry(QRect(50, 180, 49, 16));
+        label_4->setGeometry(QRect(20, 160, 49, 16));
         rok_prod_edit = new QLineEdit(dodawanie_rekordu);
         rok_prod_edit->setObjectName("rok_prod_edit");
-        rok_prod_edit->setGeometry(QRect(160, 30, 113, 24));
+        rok_prod_edit->setGeometry(QRect(130, 10, 113, 24));
         tytul_edit = new QLineEdit(dodawanie_rekordu);
         tytul_edit->setObjectName("tytul_edit");
-        tytul_edit->setGeometry(QRect(160, 80, 113, 24));
+        tytul_edit->setGeometry(QRect(130, 60, 113, 24));
         rezyser_edit = new QLineEdit(dodawanie_rekordu);
         rezyser_edit->setObjectName("rezyser_edit");
-        rezyser_edit->setGeometry(QRect(160, 130, 113, 24));
+        rezyser_edit->setGeometry(QRect(130, 110, 113, 24));
         gatunek_edit = new QLineEdit(dodawanie_rekordu);
         gatunek_edit->setObjectName("gatunek_edit");
-        gatunek_edit->setGeometry(QRect(160, 180, 113, 24));
+        gatunek_edit->setGeometry(QRect(130, 160, 113, 24));
         pushButton_Dodaj = new QPushButton(dodawanie_rekordu);
         pushButton_Dodaj->setObjectName("pushButton_Dodaj");
-        pushButton_Dodaj->setGeometry(QRect(180, 250, 80, 24));
+        pushButton_Dodaj->setGeometry(QRect(80, 210, 80, 24));
         pushButton_Porzuc = new QPushButton(dodawanie_rekordu);
         pushButton_Porzuc->setObjectName("pushButton_Porzuc");
-        pushButton_Porzuc->setGeometry(QRect(280, 250, 80, 24));
+        pushButton_Porzuc->setGeometry(QRect(180, 210, 80, 24));
 
         retranslateUi(dodawanie_rekordu);
 

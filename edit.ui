@@ -1,36 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>dodawanie_rekordu</class>
- <widget class="QDialog" name="dodawanie_rekordu">
+ <class>Edit</class>
+ <widget class="QDialog" name="Edit">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>278</width>
-    <height>249</height>
+    <width>400</width>
+    <height>300</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QLabel" name="label">
+  <widget class="QPushButton" name="pushButton_Zatwierdz">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>10</y>
-     <width>121</width>
-     <height>16</height>
+     <x>130</x>
+     <y>230</y>
+     <width>80</width>
+     <height>24</height>
     </rect>
    </property>
    <property name="text">
-    <string>Rok Produkcji</string>
+    <string>Zatwierdź</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_Porzuc">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>230</y>
+     <width>80</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Porzuć</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>60</y>
+     <x>10</x>
+     <y>70</y>
      <width>49</width>
      <height>16</height>
     </rect>
@@ -42,8 +55,8 @@
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>110</y>
+     <x>10</x>
+     <y>120</y>
      <width>49</width>
      <height>16</height>
     </rect>
@@ -52,11 +65,34 @@
     <string>Reżyser</string>
    </property>
   </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>20</y>
+     <width>121</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Rok Produkcji</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="rok_prod_edit">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>20</y>
+     <width>113</width>
+     <height>24</height>
+    </rect>
+   </property>
+  </widget>
   <widget class="QLabel" name="label_4">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>160</y>
+     <x>10</x>
+     <y>170</y>
      <width>49</width>
      <height>16</height>
     </rect>
@@ -65,31 +101,11 @@
     <string>Gatunek</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="rok_prod_edit">
-   <property name="geometry">
-    <rect>
-     <x>130</x>
-     <y>10</y>
-     <width>113</width>
-     <height>24</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="tytul_edit">
-   <property name="geometry">
-    <rect>
-     <x>130</x>
-     <y>60</y>
-     <width>113</width>
-     <height>24</height>
-    </rect>
-   </property>
-  </widget>
   <widget class="QLineEdit" name="rezyser_edit">
    <property name="geometry">
     <rect>
-     <x>130</x>
-     <y>110</y>
+     <x>120</x>
+     <y>120</y>
      <width>113</width>
      <height>24</height>
     </rect>
@@ -98,37 +114,21 @@
   <widget class="QLineEdit" name="gatunek_edit">
    <property name="geometry">
     <rect>
-     <x>130</x>
-     <y>160</y>
+     <x>120</x>
+     <y>170</y>
      <width>113</width>
      <height>24</height>
     </rect>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_Dodaj">
+  <widget class="QLineEdit" name="tytul_edit">
    <property name="geometry">
     <rect>
-     <x>80</x>
-     <y>210</y>
-     <width>80</width>
+     <x>120</x>
+     <y>70</y>
+     <width>113</width>
      <height>24</height>
     </rect>
-   </property>
-   <property name="text">
-    <string>Dodaj</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_Porzuc">
-   <property name="geometry">
-    <rect>
-     <x>180</x>
-     <y>210</y>
-     <width>80</width>
-     <height>24</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Porzuć</string>
    </property>
   </widget>
  </widget>

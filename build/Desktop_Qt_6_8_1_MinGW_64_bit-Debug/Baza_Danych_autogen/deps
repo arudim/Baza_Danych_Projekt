@@ -558,9 +558,9 @@ Baza_Danych_autogen/timestamp: \
 	C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/time.h \
 	C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h \
 	C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h \
-	C:/Users/Wojtek/Documents/Baza_Danych/BazaDanych.cpp \
-	C:/Users/Wojtek/Documents/Baza_Danych/BazaDanych.h \
 	C:/Users/Wojtek/Documents/Baza_Danych/CMakeLists.txt \
+	C:/Users/Wojtek/Documents/Baza_Danych/bazadanych.cpp \
+	C:/Users/Wojtek/Documents/Baza_Danych/bazadanych.h \
 	C:/Users/Wojtek/Documents/Baza_Danych/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/.qtc/package-manager/auto-setup.cmake \
 	C:/Users/Wojtek/Documents/Baza_Danych/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/Baza_Danych_autogen/moc_predefs.h \
 	C:/Users/Wojtek/Documents/Baza_Danych/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/CMakeFiles/3.29.3/CMakeCXXCompiler.cmake \
@@ -568,13 +568,12 @@ Baza_Danych_autogen/timestamp: \
 	C:/Users/Wojtek/Documents/Baza_Danych/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/CMakeFiles/3.29.3/CMakeSystem.cmake \
 	C:/Users/Wojtek/Documents/Baza_Danych/dodawanie_rekordu.cpp \
 	C:/Users/Wojtek/Documents/Baza_Danych/dodawanie_rekordu.h \
-	C:/Users/Wojtek/Documents/Baza_Danych/film.cpp \
-	C:/Users/Wojtek/Documents/Baza_Danych/film.h \
-	C:/Users/Wojtek/Documents/Baza_Danych/ksiazka.cpp \
-	C:/Users/Wojtek/Documents/Baza_Danych/ksiazka.h \
+	C:/Users/Wojtek/Documents/Baza_Danych/edit.cpp \
+	C:/Users/Wojtek/Documents/Baza_Danych/edit.h \
 	C:/Users/Wojtek/Documents/Baza_Danych/main.cpp \
 	C:/Users/Wojtek/Documents/Baza_Danych/mainwindow.cpp \
 	C:/Users/Wojtek/Documents/Baza_Danych/mainwindow.h \
 	C:/Users/Wojtek/Documents/Baza_Danych/dodawanie_rekordu.ui \
+	C:/Users/Wojtek/Documents/Baza_Danych/edit.ui \
 	C:/Users/Wojtek/Documents/Baza_Danych/mainwindow.ui \
 	C:/Qt/Tools/CMake_64/bin/cmake.exe

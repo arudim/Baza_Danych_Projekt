@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "dodawanie_rekordu.h"
+#include "edit.h"
 #include <QTableWidget>
 #include <QJsonArray>
 
@@ -26,11 +27,24 @@ public:
     Ui::MainWindow *ui;
     void updateTable();
     int kolumna_sortowania=0;
+    int edit_id=0;
+    int edit_rok=0;
+    QString edit_tytul;
+    QString edit_rezyser;
+    QString edit_gatunek;
     dodawanie_rekordu *okno;
+    Edit *okno2;
+
 private slots:
     void on_Add_Button_clicked();
     void on_Delete_Button_clicked();
     void on_Sort_Button_clicked();
+
+    void on_Search_Button_clicked();
+
+    void on_Refresh_Button_clicked();
+
+    void on_Edit_Button_clicked();
 
 private:
 

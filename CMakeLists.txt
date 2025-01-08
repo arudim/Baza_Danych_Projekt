@@ -15,6 +15,8 @@ qt_add_executable(Baza_Danych
 
     BazaDanych.h BazaDanych.cpp
     dodawanie_rekordu.h dodawanie_rekordu.cpp dodawanie_rekordu.ui
+    edit.h edit.cpp edit.ui
+
 
 
 

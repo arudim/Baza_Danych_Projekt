@@ -13,6 +13,7 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
@@ -31,6 +32,10 @@ public:
     QTableWidget *tableWidget;
     QPushButton *Sort_Button;
     QLabel *label;
+    QPushButton *Search_Button;
+    QPushButton *Refresh_Button;
+    QLineEdit *lineEdit_Search;
+    QPushButton *Edit_Button;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -38,28 +43,43 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(800, 600);
+        MainWindow->resize(681, 386);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         Add_Button = new QPushButton(centralwidget);
         Add_Button->setObjectName("Add_Button");
-        Add_Button->setGeometry(QRect(40, 170, 80, 24));
+        Add_Button->setGeometry(QRect(10, 60, 80, 24));
         Delete_Button = new QPushButton(centralwidget);
         Delete_Button->setObjectName("Delete_Button");
-        Delete_Button->setGeometry(QRect(40, 220, 80, 24));
+        Delete_Button->setGeometry(QRect(10, 90, 80, 24));
         tableWidget = new QTableWidget(centralwidget);
         tableWidget->setObjectName("tableWidget");
-        tableWidget->setGeometry(QRect(150, 170, 491, 241));
+        tableWidget->setGeometry(QRect(100, 60, 551, 241));
         Sort_Button = new QPushButton(centralwidget);
         Sort_Button->setObjectName("Sort_Button");
-        Sort_Button->setGeometry(QRect(40, 260, 80, 24));
+        Sort_Button->setGeometry(QRect(10, 280, 80, 24));
         label = new QLabel(centralwidget);
         label->setObjectName("label");
-        label->setGeometry(QRect(190, 40, 231, 91));
+        label->setGeometry(QRect(230, 0, 281, 51));
+        QFont font;
+        font.setPointSize(20);
+        label->setFont(font);
+        Search_Button = new QPushButton(centralwidget);
+        Search_Button->setObjectName("Search_Button");
+        Search_Button->setGeometry(QRect(10, 310, 80, 24));
+        Refresh_Button = new QPushButton(centralwidget);
+        Refresh_Button->setObjectName("Refresh_Button");
+        Refresh_Button->setGeometry(QRect(10, 250, 80, 24));
+        lineEdit_Search = new QLineEdit(centralwidget);
+        lineEdit_Search->setObjectName("lineEdit_Search");
+        lineEdit_Search->setGeometry(QRect(100, 310, 113, 24));
+        Edit_Button = new QPushButton(centralwidget);
+        Edit_Button->setObjectName("Edit_Button");
+        Edit_Button->setGeometry(QRect(10, 120, 80, 24));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 800, 21));
+        menubar->setGeometry(QRect(0, 0, 681, 21));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");
@@ -77,6 +97,9 @@ public:
         Delete_Button->setText(QCoreApplication::translate("MainWindow", "Delete", nullptr));
         Sort_Button->setText(QCoreApplication::translate("MainWindow", "Sort", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "Baza Danych Film\303\263w", nullptr));
+        Search_Button->setText(QCoreApplication::translate("MainWindow", "Search", nullptr));
+        Refresh_Button->setText(QCoreApplication::translate("MainWindow", "Refresh", nullptr));
+        Edit_Button->setText(QCoreApplication::translate("MainWindow", "Modify", nullptr));
     } // retranslateUi
 
 };

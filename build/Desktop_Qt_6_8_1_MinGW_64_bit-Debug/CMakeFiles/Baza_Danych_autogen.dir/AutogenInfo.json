@@ -242,6 +242,12 @@
 			null
 		],
 		[
+			"C:/Users/Wojtek/Documents/Baza_Danych/edit.h",
+			"MU",
+			"EWIEGA46WW/moc_edit.cpp",
+			null
+		],
+		[
 			"C:/Users/Wojtek/Documents/Baza_Danych/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
@@ -324,6 +330,7 @@
 			"MU",
 			null
 		],
+		[ "C:/Users/Wojtek/Documents/Baza_Danych/edit.cpp", "MU", null ],
 		[ "C:/Users/Wojtek/Documents/Baza_Danych/main.cpp", "MU", null ],
 		[ "C:/Users/Wojtek/Documents/Baza_Danych/mainwindow.cpp", "MU", null ]
 	],

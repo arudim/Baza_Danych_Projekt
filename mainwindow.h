@@ -42,6 +42,10 @@ private slots:
 
     void on_Edit_Button_clicked();
 
+    void on_pushButton_Save_clicked();
+
+    void on_pushButton_Load_clicked();
+
 private:
 
 };

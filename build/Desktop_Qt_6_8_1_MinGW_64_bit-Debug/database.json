@@ -1,0 +1,282 @@
+[
+    {
+        "id": 0,
+        "rezyser": "Christopher Nolan",
+        "rodzaj": "Science Fiction",
+        "rok": 2014,
+        "tytul": "Interstellar"
+    },
+    {
+        "id": 1,
+        "rezyser": "Steven Spielberg",
+        "rodzaj": "Adventure",
+        "rok": 1993,
+        "tytul": "Jurassic Park"
+    },
+    {
+        "id": 2,
+        "rezyser": "James Cameron",
+        "rodzaj": "Science Fiction",
+        "rok": 2009,
+        "tytul": "Avatar"
+    },
+    {
+        "id": 3,
+        "rezyser": "Francis Ford Coppola",
+        "rodzaj": "Crime",
+        "rok": 1972,
+        "tytul": "The Godfather"
+    },
+    {
+        "id": 4,
+        "rezyser": "Quentin Tarantino",
+        "rodzaj": "Crime",
+        "rok": 1994,
+        "tytul": "Pulp Fiction"
+    },
+    {
+        "id": 5,
+        "rezyser": "Ridley Scott",
+        "rodzaj": "Science Fiction",
+        "rok": 1982,
+        "tytul": "Blade Runner"
+    },
+    {
+        "id": 6,
+        "rezyser": "Peter Jackson",
+        "rodzaj": "Fantasy",
+        "rok": 2001,
+        "tytul": "The Lord of the Rings: The Fellowship of the Ring"
+    },
+    {
+        "id": 7,
+        "rezyser": "Martin Scorsese",
+        "rodzaj": "Biography",
+        "rok": 2013,
+        "tytul": "The Wolf of Wall Street"
+    },
+    {
+        "id": 8,
+        "rezyser": "Robert Zemeckis",
+        "rodzaj": "Drama",
+        "rok": 1994,
+        "tytul": "Forrest Gump"
+    },
+    {
+        "id": 9,
+        "rezyser": "George Lucas",
+        "rodzaj": "Science Fiction",
+        "rok": 1977,
+        "tytul": "Star Wars: Episode IV - A New Hope"
+    },
+    {
+        "id": 10,
+        "rezyser": "Alfred Hitchcock",
+        "rodzaj": "Thriller",
+        "rok": 1960,
+        "tytul": "Psycho"
+    },
+    {
+        "id": 11,
+        "rezyser": "Stanley Kubrick",
+        "rodzaj": "Science Fiction",
+        "rok": 1968,
+        "tytul": "2001: A Space Odyssey"
+    },
+    {
+        "id": 12,
+        "rezyser": "Christopher Nolan",
+        "rodzaj": "Action",
+        "rok": 2008,
+        "tytul": "The Dark Knight"
+    },
+    {
+        "id": 13,
+        "rezyser": "Frank Darabont",
+        "rodzaj": "Drama",
+        "rok": 1994,
+        "tytul": "The Shawshank Redemption"
+    },
+    {
+        "id": 14,
+        "rezyser": "James Cameron",
+        "rodzaj": "Romance",
+        "rok": 1997,
+        "tytul": "Titanic"
+    },
+    {
+        "id": 15,
+        "rezyser": "David Fincher",
+        "rodzaj": "Thriller",
+        "rok": 1999,
+        "tytul": "Fight Club"
+    },
+    {
+        "id": 16,
+        "rezyser": "Baz Luhrmann",
+        "rodzaj": "Romance",
+        "rok": 2013,
+        "tytul": "The Great Gatsby"
+    },
+    {
+        "id": 17,
+        "rezyser": "Ridley Scott",
+        "rodzaj": "Adventure",
+        "rok": 2000,
+        "tytul": "Gladiator"
+    },
+    {
+        "id": 18,
+        "rezyser": "Christopher Nolan",
+        "rodzaj": "Mystery",
+        "rok": 2006,
+        "tytul": "The Prestige"
+    },
+    {
+        "id": 19,
+        "rezyser": "Wes Anderson",
+        "rodzaj": "Comedy",
+        "rok": 2014,
+        "tytul": "The Grand Budapest Hotel"
+    },
+    {
+        "id": 20,
+        "rezyser": "Peter Weir",
+        "rodzaj": "Drama",
+        "rok": 1998,
+        "tytul": "The Truman Show"
+    },
+    {
+        "id": 21,
+        "rezyser": "Damien Chazelle",
+        "rodzaj": "Musical",
+        "rok": 2016,
+        "tytul": "La La Land"
+    },
+    {
+        "id": 22,
+        "rezyser": "Greta Gerwig",
+        "rodzaj": "Drama",
+        "rok": 2019,
+        "tytul": "Little Women"
+    },
+    {
+        "id": 23,
+        "rezyser": "Jordan Peele",
+        "rodzaj": "Horror",
+        "rok": 2017,
+        "tytul": "Get Out"
+    },
+    {
+        "id": 24,
+        "rezyser": "Guillermo del Toro",
+        "rodzaj": "Fantasy",
+        "rok": 2006,
+        "tytul": "Pan's Labyrinth"
+    },
+    {
+        "id": 25,
+        "rezyser": "Bong Joon Ho",
+        "rodzaj": "Drama",
+        "rok": 2019,
+        "tytul": "Parasite"
+    },
+    {
+        "id": 26,
+        "rezyser": "Richard Linklater",
+        "rodzaj": "Drama",
+        "rok": 2014,
+        "tytul": "Boyhood"
+    },
+    {
+        "id": 27,
+        "rezyser": "Pixar",
+        "rodzaj": "Animation",
+        "rok": 2003,
+        "tytul": "Finding Nemo"
+    },
+    {
+        "id": 28,
+        "rezyser": "Jon Favreau",
+        "rodzaj": "Fantasy",
+        "rok": 2019,
+        "tytul": "The Lion King"
+    },
+    {
+        "id": 29,
+        "rezyser": "Joe Russo",
+        "rodzaj": "Action",
+        "rok": 2019,
+        "tytul": "Avengers: Endgame"
+    },
+    {
+        "id": 30,
+        "rezyser": "Christopher Nolan",
+        "rodzaj": "Science Fiction",
+        "rok": 2010,
+        "tytul": "Inception"
+    },
+    {
+        "id": 31,
+        "rezyser": "Taika Waititi",
+        "rodzaj": "Comedy",
+        "rok": 2019,
+        "tytul": "Jojo Rabbit"
+    },
+    {
+        "id": 32,
+        "rezyser": "Coen Brothers",
+        "rodzaj": "Comedy",
+        "rok": 1998,
+        "tytul": "The Big Lebowski"
+    },
+    {
+        "id": 33,
+        "rezyser": "Denis Villeneuve",
+        "rodzaj": "Science Fiction",
+        "rok": 2017,
+        "tytul": "Blade Runner 2049"
+    },
+    {
+        "id": 34,
+        "rezyser": "Christopher Nolan",
+        "rodzaj": "War",
+        "rok": 2017,
+        "tytul": "Dunkirk"
+    },
+    {
+        "id": 35,
+        "rezyser": "Patty Jenkins",
+        "rodzaj": "Action",
+        "rok": 2017,
+        "tytul": "Wonder Woman"
+    },
+    {
+        "id": 36,
+        "rezyser": "John McTiernan",
+        "rodzaj": "Action",
+        "rok": 1988,
+        "tytul": "Die Hard"
+    },
+    {
+        "id": 37,
+        "rezyser": "Steven Spielberg",
+        "rodzaj": "Adventure",
+        "rok": 1981,
+        "tytul": "Raiders of the Lost Ark"
+    },
+    {
+        "id": 38,
+        "rezyser": "Hayao Miyazaki",
+        "rodzaj": "Animation",
+        "rok": 2001,
+        "tytul": "Spirited Away"
+    },
+    {
+        "id": 39,
+        "rezyser": "Greta Gerwig",
+        "rodzaj": "Drama",
+        "rok": 2023,
+        "tytul": "Barbie"
+    }
+]

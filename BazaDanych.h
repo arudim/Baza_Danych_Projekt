@@ -18,5 +18,7 @@ public:
     QJsonObject DajRekord(int _index);
     static BazaDanych& Instancja();
     void EdytowanieRekordu(int _id, int _rok, QString _tytul, QString _rezyser, QString _gatunek);
+    bool ZapisDoPliku(const QString &fileName);
+    bool OdczytZPliku(const QString &fileName);
 };
 #endif // BAZADANYCH_H

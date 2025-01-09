@@ -36,6 +36,8 @@ public:
     QPushButton *Refresh_Button;
     QLineEdit *lineEdit_Search;
     QPushButton *Edit_Button;
+    QPushButton *pushButton_Save;
+    QPushButton *pushButton_Load;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -76,6 +78,12 @@ public:
         Edit_Button = new QPushButton(centralwidget);
         Edit_Button->setObjectName("Edit_Button");
         Edit_Button->setGeometry(QRect(10, 120, 80, 24));
+        pushButton_Save = new QPushButton(centralwidget);
+        pushButton_Save->setObjectName("pushButton_Save");
+        pushButton_Save->setGeometry(QRect(10, 180, 80, 24));
+        pushButton_Load = new QPushButton(centralwidget);
+        pushButton_Load->setObjectName("pushButton_Load");
+        pushButton_Load->setGeometry(QRect(10, 150, 80, 24));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
@@ -100,6 +108,8 @@ public:
         Search_Button->setText(QCoreApplication::translate("MainWindow", "Search", nullptr));
         Refresh_Button->setText(QCoreApplication::translate("MainWindow", "Refresh", nullptr));
         Edit_Button->setText(QCoreApplication::translate("MainWindow", "Modify", nullptr));
+        pushButton_Save->setText(QCoreApplication::translate("MainWindow", "Save", nullptr));
+        pushButton_Load->setText(QCoreApplication::translate("MainWindow", "Load", nullptr));
     } // retranslateUi
 
 };

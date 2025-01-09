@@ -84,6 +84,9 @@ void MainWindow::on_Sort_Button_clicked()
         kolumna_sortowania = ui->tableWidget->column(selectedItems.first());
         updateTable();
     }
+    else{
+        QMessageBox::about(this,"Błąd Sortowania","Nie Wybrano Kolumny Sortującej");
+    }
 }
 
 
@@ -120,5 +123,31 @@ void MainWindow::on_Edit_Button_clicked()
     }
     okno2 = new Edit(this);
     okno2->show();
+}
+
+
+void MainWindow::on_pushButton_Save_clicked()
+{
+    BazaDanych &DB=BazaDanych::Instancja();
+    if(DB.ZapisDoPliku("database.json")){
+        QMessageBox::about(this,"Zapis pomyślny.","Plik zapisany.");
+    }
+    else{
+        QMessageBox::about(this,"Błąd zapisu.","Plik nie został zapisany.");
+    }
+
+}
+
+
+void MainWindow::on_pushButton_Load_clicked()
+{
+    BazaDanych &DB=BazaDanych::Instancja();
+    if(DB.OdczytZPliku("database.json")){
+        QMessageBox::about(this,"Odczyt pomyślny.","Plik Odczytany.");
+    }
+    else{
+        QMessageBox::about(this,"Błąd odczytu.","Plik nie został odczytany.");
+    }
+    updateTable();
 }
 

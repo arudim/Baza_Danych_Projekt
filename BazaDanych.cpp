@@ -1,6 +1,7 @@
 #include "BazaDanych.h"
 #include <QJsonObject>
 #include <QFile>
+#include <QMessageBox>
 static BazaDanych instancja_bazy;
 
 BazaDanych& BazaDanych::Instancja(){
@@ -52,6 +53,33 @@ void BazaDanych::EdytowanieRekordu(int _id, int _rok, QString _tytul, QString _r
     rekord["rezyser"] = _rezyser;
     rekord["rodzaj"] = _gatunek;
     db.replace(_id,rekord);
+}
+
+bool BazaDanych::ZapisDoPliku(const QString &fileName){
+    QFile file(fileName);
+    bool a=true;
+    if(!file.open(QIODevice::WriteOnly)){
+        a=false;
+        return a;
+    }
+    QJsonDocument doc(db);
+    file.write(doc.toJson());
+    file.close();
+    return a;
+}
+
+bool BazaDanych::OdczytZPliku(const QString &fileName){
+    bool a=true;
+    QFile file(fileName);
+    if(!file.open(QIODevice::ReadOnly)){
+        a=false;
+        return a;
+    }
+    QByteArray data= file.readAll();
+    QJsonDocument doc(QJsonDocument::fromJson(data));
+    db=doc.array();
+    file.close();
+    return a;
 }
 
 

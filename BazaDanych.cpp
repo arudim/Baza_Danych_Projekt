@@ -11,7 +11,14 @@ BazaDanych& BazaDanych::Instancja(){
 BazaDanych::BazaDanych() {
     id=0;
 }
-
+/*!
+ * \brief BazaDanych::DodawnieRekordu
+ * \param _rok
+ * \param _tytul
+ * \param _rezyser
+ * \param _gatunek
+ * \return
+ */
 QString BazaDanych::DodawnieRekordu(int _rok, QString _tytul, QString _rezyser, QString _gatunek){
     QString ret="";
     QJsonObject rekord;

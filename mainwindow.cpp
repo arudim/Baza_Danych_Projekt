@@ -37,12 +37,12 @@ MainWindow::~MainWindow()
 void MainWindow::updateTable() {
     QJsonObject r;
     BazaDanych &DB=BazaDanych::Instancja();
+    ui->tableWidget->setRowCount(DB.db.size());
     for (int i =0; ;i++){
         r=DB.DajRekord(i);
         if(r.isEmpty()){
             break;
         }
-        ui->tableWidget->setRowCount(i+1);
         ui->tableWidget->setItem(i, 0, new QTableWidgetItem(QString::number(r["id"].toInt())));
         ui->tableWidget->setItem(i, 1, new QTableWidgetItem(QString::number(r["rok"].toInt())));
         ui->tableWidget->setItem(i, 2, new QTableWidgetItem(r["tytul"].toString()));

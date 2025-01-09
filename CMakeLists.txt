@@ -20,6 +20,7 @@ qt_add_executable(Baza_Danych
 
 
 
+
 )
 
 target_link_libraries(Baza_Danych

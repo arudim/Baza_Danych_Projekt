@@ -6,6 +6,7 @@
 #include <QJsonValue>
 #include <QString>
 #include "BazaDanych.h"
+#include <QFileDialog>
 
 MainWindow* mainWindowInstance = nullptr;
 QJsonObject rekord;
@@ -22,7 +23,7 @@ MainWindow::MainWindow(QWidget *parent)
     QStringList headers;
     headers<< "ID" << "Year" << "Name" << "Director" << "Type";
     ui->tableWidget->setHorizontalHeaderLabels(headers);
-    ui->tableWidget->setColumnHidden(0,true);
+    //ui->tableWidget->setColumnHidden(0,true);
     ui->tableWidget->horizontalHeader()->setSectionResizeMode(2,QHeaderView::Stretch);
 }
 
@@ -37,9 +38,17 @@ MainWindow::~MainWindow()
 void MainWindow::updateTable() {
     QJsonObject r;
     BazaDanych &DB=BazaDanych::Instancja();
-    ui->tableWidget->setRowCount(DB.db.size());
-    for (int i =0; ;i++){
-        r=DB.DajRekord(i);
+//    ui->tableWidget->setRowCount(0);
+    int rc=ui->tableWidget->rowCount();
+    int dbs=DB.db.size();
+    auto tbl=ui->tableWidget;
+    for (int i =0;i<rc ;i++){
+        ui->tableWidget->removeRow(i);
+    }
+    ui->tableWidget->setRowCount(dbs);
+    DB.DajRekordReset();
+    for (int i =0;i<dbs ;i++){
+        r=DB.DajRekord();
         if(r.isEmpty()){
             break;
         }
@@ -49,7 +58,9 @@ void MainWindow::updateTable() {
         ui->tableWidget->setItem(i, 3, new QTableWidgetItem(r["rezyser"].toString()));
         ui->tableWidget->setItem(i, 4, new QTableWidgetItem(r["rodzaj"].toString()));
     }
+    if(kolumna_sortowania!=0){
         ui->tableWidget->sortByColumn(kolumna_sortowania,Qt::AscendingOrder);
+    }
 }
 void MainWindow::on_Add_Button_clicked()
 {
@@ -142,7 +153,8 @@ void MainWindow::on_pushButton_Save_clicked()
 void MainWindow::on_pushButton_Load_clicked()
 {
     BazaDanych &DB=BazaDanych::Instancja();
-    if(DB.OdczytZPliku("database.json")){
+    QString plik=QFileDialog::getOpenFileName(this,"Wybierz plik bazy danch filmow.","","*.json");
+    if(DB.OdczytZPliku(plik)){
         QMessageBox::about(this,"Odczyt pomyślny.","Plik Odczytany.");
     }
     else{

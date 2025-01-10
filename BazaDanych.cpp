@@ -37,18 +37,35 @@ void BazaDanych::KasowanieRekordu(int _id){
         if(db[i].toObject()["id"]==_id){
             db.removeAt(i);
             break;
-
         }
     }
 }
 
-QJsonObject BazaDanych::DajRekord(int _index){
+void BazaDanych::DajRekordReset(){
+    indexNext=0;
+}
+
+QJsonObject BazaDanych::DajRekord(){
+    return db[indexNext++].toObject();
+}
+
+QJsonObject BazaDanych::DajRekord(int _id){
     QJsonObject ret;
-    if(_index>=db.size()){
+    /*if(_index>=db.size()){
         ret.empty();
     }
     else{
         ret=db[_index].toObject();
+    }
+    return ret;*/
+
+    for(int i =0; i<db.size();i++){
+        if(db[i].toObject()["id"]==_id){
+            ret=db[i].toObject();
+        }
+        else{
+            ret.empty();
+        }
     }
     return ret;
 }
@@ -85,6 +102,13 @@ bool BazaDanych::OdczytZPliku(const QString &fileName){
     QByteArray data= file.readAll();
     QJsonDocument doc(QJsonDocument::fromJson(data));
     db=doc.array();
+    DajRekordReset();
+    for(int i=0;i<db.size();i++){
+        auto _id=DajRekord()["id"].toInt();
+        if(id<_id)
+            id=_id;
+    }
+    id++;
     file.close();
     return a;
 }

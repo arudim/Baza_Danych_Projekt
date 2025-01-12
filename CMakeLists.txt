@@ -11,16 +11,9 @@ qt_add_executable(Baza_Danych
     mainwindow.cpp
     mainwindow.h
     mainwindow.ui
-
-
     BazaDanych.h BazaDanych.cpp
     dodawanie_rekordu.h dodawanie_rekordu.cpp dodawanie_rekordu.ui
     edit.h edit.cpp edit.ui
-
-
-
-
-
 )
 
 target_link_libraries(Baza_Danych

@@ -5,7 +5,7 @@
 #include <QMessageBox>
 #include <QJsonValue>
 #include <QString>
-#include "BazaDanych.h"
+#include "BazaAbstract.h"
 #include <QFileDialog>
 
 MainWindow* mainWindowInstance = nullptr;
@@ -37,10 +37,9 @@ MainWindow::~MainWindow()
  */
 void MainWindow::updateTable() {
     QJsonObject r;
-    BazaDanych &DB=BazaDanych::Instancja();
-//    ui->tableWidget->setRowCount(0);
+    BazaAbstract &DB=BazaAbstract::Instancja();
     int rc=ui->tableWidget->rowCount();
-    int dbs=DB.db.size();
+    int dbs=DB.Rozmiar();
     auto tbl=ui->tableWidget;
     for (int i =0;i<rc ;i++){
         ui->tableWidget->removeRow(i);
@@ -72,7 +71,7 @@ void MainWindow::on_Add_Button_clicked()
  */
 void MainWindow::on_Delete_Button_clicked()
 {
-    BazaDanych &DB=BazaDanych::Instancja();
+    BazaAbstract &DB=BazaAbstract::Instancja();
     auto selectedItems = ui->tableWidget->selectedItems();
     if (!selectedItems.isEmpty()) {
         int row = ui->tableWidget->row(selectedItems.first());
@@ -139,7 +138,7 @@ void MainWindow::on_Edit_Button_clicked()
 
 void MainWindow::on_pushButton_Save_clicked()
 {
-    BazaDanych &DB=BazaDanych::Instancja();
+    BazaAbstract &DB=BazaAbstract::Instancja();
     if(DB.ZapisDoPliku("database.json")){
         QMessageBox::about(this,"Zapis pomyślny.","Plik zapisany.");
     }
@@ -152,7 +151,7 @@ void MainWindow::on_pushButton_Save_clicked()
 
 void MainWindow::on_pushButton_Load_clicked()
 {
-    BazaDanych &DB=BazaDanych::Instancja();
+    BazaAbstract &DB=BazaAbstract::Instancja();
     QString plik=QFileDialog::getOpenFileName(this,"Wybierz plik bazy danch filmow.","","*.json");
     if(DB.OdczytZPliku(plik)){
         QMessageBox::about(this,"Odczyt pomyślny.","Plik Odczytany.");

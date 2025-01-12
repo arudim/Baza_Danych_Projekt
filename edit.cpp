@@ -1,7 +1,7 @@
 #include "mainwindow.h"
 #include "edit.h"
 #include "ui_edit.h"
-#include "BazaDanych.h"
+#include "BazaAbstract.h"
 #include <QMessageBox>
 
 Edit::Edit(QWidget *parent)
@@ -10,7 +10,7 @@ Edit::Edit(QWidget *parent)
     ,mw((MainWindow*) parent)
 {
     ui->setupUi(this);
-    BazaDanych &DB=BazaDanych::Instancja();
+    BazaAbstract &DB=BazaAbstract::Instancja();
     QJsonObject r=DB.DajRekord(mw->edit_id);
     int edit_rok=r["rok"].toInt();
     QString edit_tytul=r["tytul"].toString();
@@ -35,7 +35,7 @@ void Edit::on_pushButton_Porzuc_clicked()
 
 void Edit::on_pushButton_Zatwierdz_clicked()
 {
-    BazaDanych &DB=BazaDanych::Instancja();
+    BazaAbstract &DB=BazaAbstract::Instancja();
     if (ui->rok_prod_edit->text().isEmpty() ||
         ui->tytul_edit->text().isEmpty() ||
         ui->rezyser_edit->text().isEmpty() ||

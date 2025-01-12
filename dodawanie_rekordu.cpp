@@ -1,7 +1,7 @@
 #include "mainwindow.h"
 #include "dodawanie_rekordu.h"
 #include "ui_dodawanie_rekordu.h"
-#include "BazaDanych.h"
+#include "BazaAbstract.h"
 #include <QMessageBox>
 
 dodawanie_rekordu::dodawanie_rekordu(QWidget *parent)
@@ -22,7 +22,7 @@ dodawanie_rekordu::~dodawanie_rekordu()
 
 void dodawanie_rekordu::on_pushButton_Dodaj_clicked()
 {
-    BazaDanych &DB=BazaDanych::Instancja();
+    BazaAbstract &DB=BazaAbstract::Instancja();
     if (ui->rok_prod_edit->text().isEmpty() ||
         ui->tytul_edit->text().isEmpty() ||
         ui->rezyser_edit->text().isEmpty() ||

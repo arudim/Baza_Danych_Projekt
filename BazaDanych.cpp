@@ -4,13 +4,11 @@
 #include <QMessageBox>
 static BazaDanych instancja_bazy;
 
-BazaDanych& BazaDanych::Instancja(){
-    return instancja_bazy;
-}
 
 BazaDanych::BazaDanych() {
     id=0;
 }
+
 /*!
  * \brief BazaDanych::DodawnieRekordu
  * \param _rok
@@ -111,6 +109,16 @@ bool BazaDanych::OdczytZPliku(const QString &fileName){
     id++;
     file.close();
     return a;
+}
+
+bool BazaDanych::ZnajdzPlik(QString plik)
+{
+    return false;
+}
+
+int BazaDanych::Rozmiar()
+{
+    return db.size();
 }
 
 

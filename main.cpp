@@ -1,11 +1,14 @@
 #include "mainwindow.h"
 
 #include <QApplication>
-#include "BazaDanych.h"
-extern BazaAbstract *dba;
+#include "BazaJson.h"
+#include "qplik.h"
+extern BazaDanych *dba;
+extern Plik *pa;
 int main(int argc, char *argv[])
 {
-    dba=new BazaDanych();
+    dba=new BazaJson();
+    pa=new QPlik();
     QApplication a(argc, argv);
     MainWindow w;
     w.show();

@@ -1,32 +1,25 @@
 #ifndef BAZADANYCH_H
 #define BAZADANYCH_H
+#include <QString>
 #include <QJsonObject>
-#include <QJsonArray>
-#include <QJsonDocument>
-#include "BazaAbstract.h"
-class BazaDanych : public BazaAbstract
+
+
+class BazaDanych
 {
-private:
+public :
+    virtual QString DodawnieRekordu(int _rok, QString _tytul, QString _rezyser, QString _gatunek)=0;
+    virtual void KasowanieRekordu(int _id)=0;
+    virtual void DajRekordReset()=0;
+    virtual QJsonObject DajRekord(int _indexId)=0;
+    virtual QJsonObject DajRekord()=0;
 
-public:
-    BazaDanych();
-    virtual QString DodawnieRekordu(int _rok, QString _tytul, QString _rezyser, QString _gatunek);
-    virtual void KasowanieRekordu(int _id);
-    virtual void DajRekordReset();
-    virtual QJsonObject DajRekord(int _indexId);
-    virtual QJsonObject DajRekord();
-
-    static BazaAbstract& Instancja();
-    virtual void EdytowanieRekordu(int _id, int _rok, QString _tytul, QString _rezyser, QString _gatunek);
-    virtual bool ZapisDoPliku(const QString &fileName);
-    virtual bool OdczytZPliku(const QString &fileName);
-    virtual bool ZnajdzPlik(QString plik);
-    virtual int Rozmiar();
-
-    int id;
-    QJsonArray db;
-    QString plik_db;
-    int indexNext;
+    static BazaDanych& Instancja();
+    virtual void EdytowanieRekordu(int _id, int _rok, QString _tytul, QString _rezyser, QString _gatunek)=0;
+    virtual bool ZapisDoPliku(const QString &fileName)=0;
+    virtual bool OdczytZPliku(const QString &fileName)=0;
+    virtual bool ZnajdzPlik(QString plik)=0;
+    virtual int Rozmiar()=0;
 
 };
+
 #endif // BAZADANYCH_H

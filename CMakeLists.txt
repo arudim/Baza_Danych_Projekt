@@ -11,11 +11,13 @@ qt_add_executable(Baza_Danych
     mainwindow.cpp
     mainwindow.h
     mainwindow.ui
-    BazaDanych.h BazaDanych.cpp
+    BazaJson.h BazaJson.cpp
     dodawanie_rekordu.h dodawanie_rekordu.cpp dodawanie_rekordu.ui
     edit.h edit.cpp edit.ui
-    BazaAbstract.h
-    BazaAbstract.cpp
+    BazaDanych.h
+    BazaDanych.cpp
+    plik.h plik.cpp
+    qplik.h qplik.cpp
 )
 
 target_link_libraries(Baza_Danych

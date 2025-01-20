@@ -20,7 +20,7 @@ MainWindow::MainWindow(QWidget *parent)
   QStringList headers;
   headers << "ID" << "Year" << "Name" << "Director" << "Type";
   ui->tableWidget->setHorizontalHeaderLabels(headers);
-  // ui->tableWidget->setColumnHidden(0,true);
+  ui->tableWidget->setColumnHidden(0,true);
   ui->tableWidget->horizontalHeader()->setSectionResizeMode(
       2, QHeaderView::Stretch);
 }
@@ -28,7 +28,6 @@ MainWindow::MainWindow(QWidget *parent)
 MainWindow::~MainWindow() { delete ui; }
 /*!
  * \brief MainWindow::updateTable
- * \param f
  */
 void MainWindow::updateTable() {
   QJsonObject r;
@@ -60,6 +59,9 @@ void MainWindow::updateTable() {
     ui->tableWidget->sortByColumn(kolumna_sortowania, Qt::AscendingOrder);
   }
 }
+/*!
+ * \brief MainWindow::on_Add_Button_clicked
+ */
 void MainWindow::on_Add_Button_clicked() {
   okno = new dodawanie_rekordu(this);
   okno->show();
@@ -81,7 +83,9 @@ void MainWindow::on_Delete_Button_clicked() {
     QMessageBox::about(this, "Błąd Usuwania", "Nie Wybrano Wiersza");
   }
 }
-
+/*!
+ * \brief MainWindow::on_Sort_Button_clicked
+ */
 void MainWindow::on_Sort_Button_clicked() {
   auto selectedItems = ui->tableWidget->selectedItems();
   if (!selectedItems.isEmpty()) {
@@ -92,28 +96,32 @@ void MainWindow::on_Sort_Button_clicked() {
                        "Nie Wybrano Kolumny Sortującej");
   }
 }
-
+/*!
+ * \brief MainWindow::on_Search_Button_clicked
+ */
 void MainWindow::on_Search_Button_clicked() {
   QString query = ui->lineEdit_Search->text();
 
   QList<QTableWidgetItem *> items =
       ui->tableWidget->findItems(query, Qt::MatchContains);
-
   for (int i = 0; i < ui->tableWidget->rowCount(); i++) {
     ui->tableWidget->setRowHidden(i, true);
   }
-
   for (auto item : items) {
     ui->tableWidget->setRowHidden(item->row(), false);
   }
 }
-
+/*!
+ * \brief MainWindow::on_Refresh_Button_clicked
+ */
 void MainWindow::on_Refresh_Button_clicked() {
   for (int i = 0; i < ui->tableWidget->rowCount(); i++) {
     ui->tableWidget->setRowHidden(i, false);
   }
 }
-
+/*!
+ * \brief MainWindow::on_Edit_Button_clicked
+ */
 void MainWindow::on_Edit_Button_clicked() {
   auto selectedItems = ui->tableWidget->selectedItems();
   if (!selectedItems.isEmpty()) {
@@ -124,16 +132,21 @@ void MainWindow::on_Edit_Button_clicked() {
   okno2 = new Edit(this);
   okno2->show();
 }
-
+/*!
+ * \brief MainWindow::on_pushButton_Save_clicked
+ */
 void MainWindow::on_pushButton_Save_clicked() {
   BazaDanych &DB = BazaDanych::Instancja();
-  if (DB.ZapisDoPliku("database.json")) {
+    QString plik = QFileDialog::getSaveFileName(this,"Zapisz bazę danych","","*.json");
+  if (DB.ZapisDoPliku(plik)) {
     QMessageBox::about(this, "Zapis pomyślny.", "Plik zapisany.");
   } else {
     QMessageBox::about(this, "Błąd zapisu.", "Plik nie został zapisany.");
   }
 }
-
+/*!
+ * \brief MainWindow::on_pushButton_Load_clicked
+ */
 void MainWindow::on_pushButton_Load_clicked() {
   BazaDanych &DB = BazaDanych::Instancja();
   QString plik = QFileDialog::getOpenFileName(

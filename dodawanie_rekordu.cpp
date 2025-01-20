@@ -10,7 +10,9 @@ dodawanie_rekordu::dodawanie_rekordu(QWidget *parent)
 }
 
 dodawanie_rekordu::~dodawanie_rekordu() { delete ui; }
-
+/*!
+ * \brief dodawanie_rekordu::on_pushButton_Dodaj_clicked
+ */
 void dodawanie_rekordu::on_pushButton_Dodaj_clicked() {
   BazaDanych &DB = BazaDanych::Instancja();
   if (ui->rok_prod_edit->text().isEmpty() || ui->tytul_edit->text().isEmpty() ||

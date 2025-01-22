@@ -4,26 +4,33 @@ project(Baza_Danych LANGUAGES CXX)
 find_package(Qt6 6.5 REQUIRED COMPONENTS Core Widgets)
 
 qt_standard_project_setup()
-
+add_library(BazaJson STATIC BazaJson.cpp BazaDanych.cpp plik.cpp qplik.cpp)
 qt_add_executable(Baza_Danych
     WIN32 MACOSX_BUNDLE
     main.cpp
     mainwindow.cpp
     mainwindow.h
     mainwindow.ui
-    BazaJson.h BazaJson.cpp
+    BazaJson.h
     dodawanie_rekordu.h dodawanie_rekordu.cpp dodawanie_rekordu.ui
     edit.h edit.cpp edit.ui
     BazaDanych.h
     BazaDanych.cpp
-    plik.h plik.cpp
-    qplik.h qplik.cpp
+    plik.h
+    qplik.h
+    model.qmodel
+)
+target_link_libraries(BazaJson
+    PRIVATE
+        Qt::Core
+        Qt::Widgets
 )
 
 target_link_libraries(Baza_Danych
     PRIVATE
         Qt::Core
         Qt::Widgets
+        BazaJson
 )
 
 include(GNUInstallDirs)

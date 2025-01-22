@@ -1,5 +1,4 @@
 #include "mainwindow.h"
-
 #include "BazaJson.h"
 #include "qplik.h"
 #include <QApplication>

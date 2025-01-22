@@ -4,6 +4,13 @@
 #include "ui_edit.h"
 #include <QMessageBox>
 
+/*!
+ * \brief Edit::Edit
+ * \param parent
+ * Konstruktor
+ * Wpisanie do lineeditow odpowiednich parametrów edytowaniego pliku
+ * aby ułatwić modyfikację użytkownikowi
+ */
 Edit::Edit(QWidget *parent)
     : QDialog(parent), ui(new Ui::Edit), mw((MainWindow *)parent) {
   ui->setupUi(this);
@@ -20,16 +27,22 @@ Edit::Edit(QWidget *parent)
 }
 
 Edit::~Edit() { delete ui; }
-
+/*!
+ * \brief Edit::on_pushButton_Porzuc_clicked
+ * Zamkniecie okna pozosawiając rekord bez zmian
+ */
 void Edit::on_pushButton_Porzuc_clicked() { close(); }
-
+/*!
+ * \brief Edit::on_pushButton_Zatwierdz_clicked
+ * Kontrola błędów dodawania rekordu (uzupełnienie wszystkich pól) (rok musi być intigerem)
+ * Następnie rekord jest odpowiednio zmieniany
+ */
 void Edit::on_pushButton_Zatwierdz_clicked() {
   BazaDanych &DB = BazaDanych::Instancja();
   if (ui->rok_prod_edit->text().isEmpty() || ui->tytul_edit->text().isEmpty() ||
       ui->rezyser_edit->text().isEmpty() ||
       ui->gatunek_edit->text().isEmpty()) {
-    QMessageBox::warning(this, "Błąd Danych",
-                         "Wszystkie pola muszą być wypełnione.");
+    QMessageBox::warning(this, "Błąd Danych", "Wszystkie pola muszą być wypełnione.");
     return;
   }
   bool ok;

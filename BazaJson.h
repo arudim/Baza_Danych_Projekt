@@ -8,19 +8,16 @@ class BazaJson : public BazaDanych {
 private:
 public:
   BazaJson();
-  virtual QString DodawnieRekordu(int _rok, QString _tytul, QString _rezyser,
-                                  QString _gatunek);
+  virtual QString DodawnieRekordu(int _rok, QString _tytul, QString _rezyser, QString _gatunek);
   virtual void KasowanieRekordu(int _id);
-  virtual void DajRekordReset();
+  virtual void ResetIteratoraRekordu();
   virtual QJsonObject DajRekord(int _indexId);
-  virtual QJsonObject DajRekord();
+  virtual QJsonObject IteratorRekordu();
 
   static BazaDanych &Instancja();
-  virtual void EdytowanieRekordu(int _id, int _rok, QString _tytul,
-                                 QString _rezyser, QString _gatunek);
+  virtual void EdytowanieRekordu(int _id, int _rok, QString _tytul, QString _rezyser, QString _gatunek);
   virtual bool ZapisDoPliku(const QString &fileName);
   virtual bool OdczytZPliku(const QString &fileName);
-  virtual bool ZnajdzPlik(QString plik);
   virtual int Rozmiar();
 
   int id;

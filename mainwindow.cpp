@@ -4,15 +4,20 @@
 #include "ui_mainwindow.h"
 #include <QFileDialog>
 #include <QJsonObject>
-#include <QJsonValue>
 #include <QMessageBox>
 #include <QString>
 
 MainWindow *mainWindowInstance = nullptr;
 QJsonObject rekord;
-
-MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent), ui(new Ui::MainWindow) {
+/*!
+ * \brief MainWindow::MainWindow
+ * \param parent
+ * Konstruktor
+ * Dodatkowo definiowane parametry tablei
+ * Miedzy innymi dodane nagłówków do kolumn, ukrycie identyfikatora rekordów indywidualnego dla kazdego rejestru,
+ * ustawienie kolumny tytułowej na dynamiczną
+ */
+MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::MainWindow) {
   ui->setupUi(this);
   mainWindowInstance = this;
 
@@ -21,39 +26,40 @@ MainWindow::MainWindow(QWidget *parent)
   headers << "ID" << "Year" << "Name" << "Director" << "Type";
   ui->tableWidget->setHorizontalHeaderLabels(headers);
   ui->tableWidget->setColumnHidden(0,true);
-  ui->tableWidget->horizontalHeader()->setSectionResizeMode(
-      2, QHeaderView::Stretch);
+  ui->tableWidget->horizontalHeader()->setSectionResizeMode(2, QHeaderView::Stretch);
 }
-
+/*!
+ * \brief MainWindow::~MainWindow
+ * Destruktor
+ */
 MainWindow::~MainWindow() { delete ui; }
 /*!
  * \brief MainWindow::updateTable
+ * Pierwsza pętla usuwa wszystkie wiersze w poprzednio zadeklarowanej tabeli
+ * Druga pętla wpisuje rejestry z aktualnej bazy danych
+ * "if" sortowanie po odpowiednio zaznaczonym elemęcie tabeli
  */
 void MainWindow::updateTable() {
   QJsonObject r;
   BazaDanych &DB = BazaDanych::Instancja();
   int rc = ui->tableWidget->rowCount();
   int dbs = DB.Rozmiar();
-  auto tbl = ui->tableWidget;
+  //auto tbl = ui->tableWidget;
   for (int i = 0; i < rc; i++) {
     ui->tableWidget->removeRow(i);
   }
   ui->tableWidget->setRowCount(dbs);
-  DB.DajRekordReset();
+  DB.ResetIteratoraRekordu();
   for (int i = 0; i < dbs; i++) {
-    r = DB.DajRekord();
+    r = DB.IteratorRekordu();
     if (r.isEmpty()) {
       break;
     }
-    ui->tableWidget->setItem(
-        i, 0, new QTableWidgetItem(QString::number(r["id"].toInt())));
-    ui->tableWidget->setItem(
-        i, 1, new QTableWidgetItem(QString::number(r["rok"].toInt())));
+    ui->tableWidget->setItem(i, 0, new QTableWidgetItem(QString::number(r["id"].toInt())));
+    ui->tableWidget->setItem(i, 1, new QTableWidgetItem(QString::number(r["rok"].toInt())));
     ui->tableWidget->setItem(i, 2, new QTableWidgetItem(r["tytul"].toString()));
-    ui->tableWidget->setItem(i, 3,
-                             new QTableWidgetItem(r["rezyser"].toString()));
-    ui->tableWidget->setItem(i, 4,
-                             new QTableWidgetItem(r["rodzaj"].toString()));
+    ui->tableWidget->setItem(i, 3, new QTableWidgetItem(r["rezyser"].toString()));
+    ui->tableWidget->setItem(i, 4, new QTableWidgetItem(r["rodzaj"].toString()));
   }
   if (kolumna_sortowania != 0) {
     ui->tableWidget->sortByColumn(kolumna_sortowania, Qt::AscendingOrder);
@@ -61,6 +67,7 @@ void MainWindow::updateTable() {
 }
 /*!
  * \brief MainWindow::on_Add_Button_clicked
+ * Otwarcie nowego okna dodawanai rekordów
  */
 void MainWindow::on_Add_Button_clicked() {
   okno = new dodawanie_rekordu(this);
@@ -68,6 +75,7 @@ void MainWindow::on_Add_Button_clicked() {
 }
 /*!
  * \brief MainWindow::on_Delete_Button_clicked
+ * Usuwanie pierwszego zaznaczonego rekordu z tabeli
  */
 void MainWindow::on_Delete_Button_clicked() {
   BazaDanych &DB = BazaDanych::Instancja();
@@ -85,6 +93,7 @@ void MainWindow::on_Delete_Button_clicked() {
 }
 /*!
  * \brief MainWindow::on_Sort_Button_clicked
+ * Sortowanie tabeli na podstawie danych w wybranej kolumnie
  */
 void MainWindow::on_Sort_Button_clicked() {
   auto selectedItems = ui->tableWidget->selectedItems();
@@ -92,18 +101,19 @@ void MainWindow::on_Sort_Button_clicked() {
     kolumna_sortowania = ui->tableWidget->column(selectedItems.first());
     updateTable();
   } else {
-    QMessageBox::about(this, "Błąd Sortowania",
-                       "Nie Wybrano Kolumny Sortującej");
+    QMessageBox::about(this, "Błąd Sortowania","Nie Wybrano Kolumny Sortującej");
   }
 }
 /*!
  * \brief MainWindow::on_Search_Button_clicked
+ * Sortowanie danych na podstawie zadanego lineEdita
+ * Pierwsza pętla ukrywa wszystkie wiersze
+ * Druga pętla odsłania pasujące do wyszukiwania wyniki
  */
 void MainWindow::on_Search_Button_clicked() {
   QString query = ui->lineEdit_Search->text();
 
-  QList<QTableWidgetItem *> items =
-      ui->tableWidget->findItems(query, Qt::MatchContains);
+  QList<QTableWidgetItem *> items = ui->tableWidget->findItems(query, Qt::MatchContains);
   for (int i = 0; i < ui->tableWidget->rowCount(); i++) {
     ui->tableWidget->setRowHidden(i, true);
   }
@@ -113,6 +123,7 @@ void MainWindow::on_Search_Button_clicked() {
 }
 /*!
  * \brief MainWindow::on_Refresh_Button_clicked
+ * Pozwala na ponowne wyswietlenmie wszystkich rekordow tabeli
  */
 void MainWindow::on_Refresh_Button_clicked() {
   for (int i = 0; i < ui->tableWidget->rowCount(); i++) {
@@ -121,6 +132,7 @@ void MainWindow::on_Refresh_Button_clicked() {
 }
 /*!
  * \brief MainWindow::on_Edit_Button_clicked
+ * Pozwala na edytowanie pierwszego oznaczonego rekordu i otwiera okno modyfikacji
  */
 void MainWindow::on_Edit_Button_clicked() {
   auto selectedItems = ui->tableWidget->selectedItems();
@@ -134,6 +146,8 @@ void MainWindow::on_Edit_Button_clicked() {
 }
 /*!
  * \brief MainWindow::on_pushButton_Save_clicked
+ * Otwiera dialog systemowy pozwalający na zapisanie nowego pliku ".json" o wybranej nazwie
+ * lub nadpisanie starej bazy danych
  */
 void MainWindow::on_pushButton_Save_clicked() {
   BazaDanych &DB = BazaDanych::Instancja();
@@ -146,6 +160,7 @@ void MainWindow::on_pushButton_Save_clicked() {
 }
 /*!
  * \brief MainWindow::on_pushButton_Load_clicked
+ * Otwiera dialog systemowy pozwalający na odczyt pliku ".json" i wczytuje go do tabeli
  */
 void MainWindow::on_pushButton_Load_clicked() {
   BazaDanych &DB = BazaDanych::Instancja();

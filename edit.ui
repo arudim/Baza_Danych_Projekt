@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>290</width>
+    <height>259</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,27 +16,27 @@
   <widget class="QPushButton" name="pushButton_Zatwierdz">
    <property name="geometry">
     <rect>
-     <x>130</x>
-     <y>230</y>
+     <x>70</x>
+     <y>220</y>
      <width>80</width>
      <height>24</height>
     </rect>
    </property>
    <property name="text">
-    <string>Zatwierdź</string>
+    <string>Ok</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_Porzuc">
    <property name="geometry">
     <rect>
-     <x>230</x>
-     <y>230</y>
+     <x>170</x>
+     <y>220</y>
      <width>80</width>
      <height>24</height>
     </rect>
    </property>
    <property name="text">
-    <string>Porzuć</string>
+    <string>Cansel</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_2">

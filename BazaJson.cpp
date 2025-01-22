@@ -13,10 +13,9 @@ BazaJson::BazaJson() { id = 0; }
  * \param _tytul
  * \param _rezyser
  * \param _gatunek
- * \return
+ * Dodawanie rekordu do bazy danych na podstawie przekazanych parametrów do funkcji
  */
-QString BazaJson::DodawnieRekordu(int _rok, QString _tytul, QString _rezyser,
-                                  QString _gatunek) {
+QString BazaJson::DodawnieRekordu(int _rok, QString _tytul, QString _rezyser, QString _gatunek) {
   QString ret = "";
   QJsonObject rekord;
 
@@ -28,7 +27,11 @@ QString BazaJson::DodawnieRekordu(int _rok, QString _tytul, QString _rezyser,
   db.append(rekord);
   return ret;
 }
-
+/*!
+ * \brief BazaJson::KasowanieRekordu
+ * \param _id
+ * Usuwanie rekordu na podstawie przekazanego do funkcji ID
+ */
 void BazaJson::KasowanieRekordu(int _id) {
   for (int i = 0; i < db.size(); i++) {
     if (db[i].toObject()["id"] == _id) {
@@ -37,21 +40,26 @@ void BazaJson::KasowanieRekordu(int _id) {
     }
   }
 }
+/*!
+ * \brief BazaJson::ResetIteratoraRekordu
+ * Metoda służy do ustawiania iteratora na początek tablicy QJsonArray
+ */
+void BazaJson::ResetIteratoraRekordu() { indexNext = 0; }
 
-void BazaJson::DajRekordReset() { indexNext = 0; }
+/*!
+ * \brief BazaJson::IteratorRekordu
+ * \return zwraca bierząco wskazywany obiekt
+ * Metoda służy do sekwencyjnego pobierania elementów z tablicy QJsonArray
+ */
+QJsonObject BazaJson::IteratorRekordu() { return db[indexNext++].toObject(); }
 
-QJsonObject BazaJson::DajRekord() { return db[indexNext++].toObject(); }
-
+/*!
+ * \brief BazaJson::DajRekord
+ * \param _id
+ * \return zwraca obiekt definiowany przez _id
+ */
 QJsonObject BazaJson::DajRekord(int _id) {
   QJsonObject ret;
-  /*if(_index>=db.size()){
-      ret.empty();
-  }
-  else{
-      ret=db[_index].toObject();
-  }
-  return ret;*/
-
   for (int i = 0; i < db.size(); i++) {
     if (db[i].toObject()["id"] == _id) {
       ret = db[i].toObject();
@@ -62,8 +70,17 @@ QJsonObject BazaJson::DajRekord(int _id) {
   return ret;
 }
 
-void BazaJson::EdytowanieRekordu(int _id, int _rok, QString _tytul,
-                                 QString _rezyser, QString _gatunek) {
+/*!
+ * \brief BazaJson::EdytowanieRekordu
+ * \param _id
+ * \param _rok
+ * \param _tytul
+ * \param _rezyser
+ * \param _gatunek
+ * Edytowanie rekordu na podstawie podanego ID do funkcji
+ * zamiana parametrów na dane podane do funkcji
+ */
+void BazaJson::EdytowanieRekordu(int _id, int _rok, QString _tytul, QString _rezyser, QString _gatunek) {
   QJsonObject rekord = DajRekord(_id);
   rekord["rok"] = _rok;
   rekord["tytul"] = _tytul;
@@ -72,6 +89,12 @@ void BazaJson::EdytowanieRekordu(int _id, int _rok, QString _tytul,
   db.replace(_id, rekord);
 }
 
+/*!
+ * \brief BazaJson::ZapisDoPliku
+ * \param fileName
+ * \return zrwaca powodzenia "true" lub "false"
+ * Zapis bazy danych do pliku zwracajacy czy zapis był pomyślny czy też nie
+ */
 bool BazaJson::ZapisDoPliku(const QString &fileName) {
   Plik &file = Plik::Instancja();
   bool a = true;
@@ -85,27 +108,37 @@ bool BazaJson::ZapisDoPliku(const QString &fileName) {
   return a;
 }
 
+/*!
+ * \brief BazaJson::OdczytZPliku
+ * \param fileName
+ * \return zrwaca powodzenia "true" lub "false"
+ * Odczyt z pliku konwertujacy dokument .json do tabeli
+ */
 bool BazaJson::OdczytZPliku(const QString &fileName) {
   bool a = true;
+    QJsonParseError blad;
   Plik &file = Plik::Instancja();
   if (!file.open(fileName, QIODevice::ReadOnly)) {
     a = false;
     return a;
   }
   QByteArray data = file.readAll();
-  QJsonDocument doc(QJsonDocument::fromJson(data));
+  QJsonDocument doc(QJsonDocument::fromJson(data,&blad));
+  if(blad.error==QJsonParseError::NoError){
   db = doc.array();
-  DajRekordReset();
+  ResetIteratoraRekordu();
   for (int i = 0; i < db.size(); i++) {
-    auto _id = DajRekord()["id"].toInt();
+    auto _id = IteratorRekordu()["id"].toInt();
     if (id < _id)
       id = _id;
   }
   id++;
+  }
+  else{ a=false;}
   file.close();
   return a;
 }
 
-bool BazaJson::ZnajdzPlik(QString plik) { return false; }
+
 
 int BazaJson::Rozmiar() { return db.size(); }

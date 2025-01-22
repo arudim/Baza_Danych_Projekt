@@ -115,7 +115,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Dodaj</string>
+    <string>Add</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_Porzuc">
@@ -128,7 +128,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Porzuć</string>
+    <string>Cansel</string>
    </property>
   </widget>
  </widget>

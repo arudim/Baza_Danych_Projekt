@@ -32,15 +32,10 @@ private slots:
   void on_Add_Button_clicked();
   void on_Delete_Button_clicked();
   void on_Sort_Button_clicked();
-
   void on_Search_Button_clicked();
-
   void on_Refresh_Button_clicked();
-
   void on_Edit_Button_clicked();
-
   void on_pushButton_Save_clicked();
-
   void on_pushButton_Load_clicked();
 
 private:

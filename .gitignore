@@ -3,5 +3,8 @@ build/*
 CMakePresets.json
 CMakeUserPresets.json
 out/*
-
+Doxyfile
+XMLSchema1.xsd
+html/*
+latex/*
 

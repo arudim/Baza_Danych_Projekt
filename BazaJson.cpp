@@ -1,8 +1,10 @@
 #include "BazaJson.h"
-#include "plik.h"
+
 #include <QIODevice>
 #include <QJsonObject>
 #include <QMessageBox>
+
+#include "plik.h"
 static BazaJson instancja_bazy;
 
 BazaJson::BazaJson() { id = 0; }
@@ -15,7 +17,8 @@ BazaJson::BazaJson() { id = 0; }
  * \param _gatunek
  * Dodawanie rekordu do bazy danych na podstawie przekazanych parametrów do funkcji
  */
-QString BazaJson::DodawnieRekordu(int _rok, QString _tytul, QString _rezyser, QString _gatunek) {
+QString
+BazaJson::DodawnieRekordu(int _rok, QString _tytul, QString _rezyser, QString _gatunek) {
   QString ret = "";
   QJsonObject rekord;
 
@@ -44,21 +47,27 @@ void BazaJson::KasowanieRekordu(int _id) {
  * \brief BazaJson::ResetIteratoraRekordu
  * Metoda służy do ustawiania iteratora na początek tablicy QJsonArray
  */
-void BazaJson::ResetIteratoraRekordu() { indexNext = 0; }
+void BazaJson::ResetIteratoraRekordu() {
+  indexNext = 0;
+}
 
 /*!
  * \brief BazaJson::IteratorRekordu
  * \return zwraca bierząco wskazywany obiekt
  * Metoda służy do sekwencyjnego pobierania elementów z tablicy QJsonArray
  */
-QJsonObject BazaJson::IteratorRekordu() { return db[indexNext++].toObject(); }
+QJsonObject
+BazaJson::IteratorRekordu() {
+  return db[indexNext++].toObject();
+}
 
 /*!
  * \brief BazaJson::DajRekord
  * \param _id
  * \return zwraca obiekt definiowany przez _id
  */
-QJsonObject BazaJson::DajRekord(int _id) {
+QJsonObject
+BazaJson::DajRekord(int _id) {
   QJsonObject ret;
   for (int i = 0; i < db.size(); i++) {
     if (db[i].toObject()["id"] == _id) {
@@ -103,7 +112,11 @@ bool BazaJson::ZapisDoPliku(const QString &fileName) {
     return a;
   }
   QJsonDocument doc(db);
-  file.write(doc.toJson());
+  qint64 n = file.write(doc.toJson());
+  qint64 n2 = doc.toJson().size();
+  if (n != n2) {
+    a = false;
+  }
   file.close();
   return a;
 }
@@ -116,29 +129,30 @@ bool BazaJson::ZapisDoPliku(const QString &fileName) {
  */
 bool BazaJson::OdczytZPliku(const QString &fileName) {
   bool a = true;
-    QJsonParseError blad;
+  QJsonParseError blad;
   Plik &file = Plik::Instancja();
   if (!file.open(fileName, QIODevice::ReadOnly)) {
     a = false;
     return a;
   }
   QByteArray data = file.readAll();
-  QJsonDocument doc(QJsonDocument::fromJson(data,&blad));
-  if(blad.error==QJsonParseError::NoError){
-  db = doc.array();
-  ResetIteratoraRekordu();
-  for (int i = 0; i < db.size(); i++) {
-    auto _id = IteratorRekordu()["id"].toInt();
-    if (id < _id)
-      id = _id;
+  QJsonDocument doc(QJsonDocument::fromJson(data, &blad));
+  if (blad.error == QJsonParseError::NoError) {
+    db = doc.array();
+    ResetIteratoraRekordu();
+    for (int i = 0; i < db.size(); i++) {
+      auto _id = IteratorRekordu()["id"].toInt();
+      if (id < _id)
+        id = _id;
+    }
+    id++;
+  } else {
+    a = false;
   }
-  id++;
-  }
-  else{ a=false;}
   file.close();
   return a;
 }
 
-
-
-int BazaJson::Rozmiar() { return db.size(); }
+int BazaJson::Rozmiar() {
+  return db.size();
+}

@@ -1,10 +1,12 @@
 #include "dodawanie_rekordu.h"
+
+#include <QMessageBox>
+
 #include "BazaDanych.h"
 #include "mainwindow.h"
 #include "ui_dodawanie_rekordu.h"
-#include <QMessageBox>
 
-dodawanie_rekordu::dodawanie_rekordu(QWidget *parent): QDialog(parent), ui(new Ui::dodawanie_rekordu), mw((MainWindow *)parent) {
+dodawanie_rekordu::dodawanie_rekordu(QWidget *parent) : QDialog(parent), ui(new Ui::dodawanie_rekordu), mw((MainWindow *)parent) {
   ui->setupUi(this);
 }
 
@@ -16,9 +18,7 @@ dodawanie_rekordu::~dodawanie_rekordu() { delete ui; }
  */
 void dodawanie_rekordu::on_pushButton_Dodaj_clicked() {
   BazaDanych &DB = BazaDanych::Instancja();
-  if (ui->rok_prod_edit->text().isEmpty() || ui->tytul_edit->text().isEmpty() ||
-      ui->rezyser_edit->text().isEmpty() ||
-      ui->gatunek_edit->text().isEmpty()) {
+  if (ui->rok_prod_edit->text().isEmpty() || ui->tytul_edit->text().isEmpty() || ui->rezyser_edit->text().isEmpty() || ui->gatunek_edit->text().isEmpty()) {
     QMessageBox::warning(this, "Błąd Danych", "Wszystkie pola muszą być wypełnione.");
     return;
   }
@@ -41,4 +41,6 @@ void dodawanie_rekordu::on_pushButton_Dodaj_clicked() {
  * \brief dodawanie_rekordu::on_pushButton_Porzuc_clicked
  * Zamkniecie okna bez dodania rekordu
  */
-void dodawanie_rekordu::on_pushButton_Porzuc_clicked() { this->close(); }
+void dodawanie_rekordu::on_pushButton_Porzuc_clicked() {
+  this->close();
+}

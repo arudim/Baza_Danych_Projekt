@@ -1,7 +1,8 @@
-#include "mainwindow.h"
-#include "BazaJson.h"
-#include "qplik.h"
 #include <QApplication>
+
+#include "BazaJson.h"
+#include "mainwindow.h"
+#include "qplik.h"
 extern BazaDanych *dba;
 extern Plik *pa;
 int main(int argc, char *argv[]) {

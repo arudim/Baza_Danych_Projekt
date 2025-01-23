@@ -4,7 +4,7 @@
 #include <QString>
 
 class Plik {
-public:
+ public:
   virtual bool open(const QString &name, QIODeviceBase::OpenMode mode) = 0;
   virtual void close() = 0;
   virtual qint64 write(const QByteArray &data) = 0;
@@ -12,4 +12,4 @@ public:
   static Plik &Instancja();
 };
 
-#endif // PLIK_H
+#endif  // PLIK_H

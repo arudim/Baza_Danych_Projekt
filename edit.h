@@ -10,18 +10,18 @@ class Edit;
 class Edit : public QDialog {
   Q_OBJECT
 
-public:
+ public:
   explicit Edit(QWidget *parent = nullptr);
   ~Edit();
   MainWindow *mw;
 
-private slots:
+ private slots:
   void on_pushButton_Porzuc_clicked();
 
   void on_pushButton_Zatwierdz_clicked();
 
-private:
+ private:
   Ui::Edit *ui;
 };
 
-#endif // EDIT_H
+#endif  // EDIT_H

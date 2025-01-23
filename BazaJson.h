@@ -1,12 +1,13 @@
 #ifndef BAZAJSON_H
 #define BAZAJSON_H
-#include "BazaDanych.h"
 #include <QJsonArray>
 #include <QJsonDocument>
 #include <QJsonObject>
+
+#include "BazaDanych.h"
 class BazaJson : public BazaDanych {
-private:
-public:
+ private:
+ public:
   BazaJson();
   virtual QString DodawnieRekordu(int _rok, QString _tytul, QString _rezyser, QString _gatunek);
   virtual void KasowanieRekordu(int _id);
@@ -25,4 +26,4 @@ public:
   QString plik_db;
   int indexNext;
 };
-#endif // BAZAJSON_H
+#endif  // BAZAJSON_H

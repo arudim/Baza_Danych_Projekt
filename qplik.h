@@ -1,12 +1,13 @@
 #ifndef QPLIK_H
 #define QPLIK_H
-#include "plik.h"
 #include <QFile>
+
+#include "plik.h"
 class QPlik : public Plik {
-private:
+ private:
   QFile f;
 
-public:
+ public:
   QPlik();
   virtual bool open(const QString &name, QIODeviceBase::OpenMode mode);
   virtual void close();
@@ -14,4 +15,4 @@ public:
   virtual QByteArray readAll();
 };
 
-#endif // QPLIK_H
+#endif  // QPLIK_H

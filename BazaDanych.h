@@ -4,7 +4,7 @@
 #include <QString>
 
 class BazaDanych {
-public:
+ public:
   virtual QString DodawnieRekordu(int _rok, QString _tytul, QString _rezyser,
                                   QString _gatunek) = 0;
   virtual void KasowanieRekordu(int _id) = 0;
@@ -20,4 +20,4 @@ public:
   virtual int Rozmiar() = 0;
 };
 
-#endif // BAZADANYCH_H
+#endif  // BAZADANYCH_H

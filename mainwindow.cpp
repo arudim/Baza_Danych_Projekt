@@ -1,11 +1,13 @@
 #include "mainwindow.h"
-#include "BazaDanych.h"
-#include "dodawanie_rekordu.h"
-#include "ui_mainwindow.h"
+
 #include <QFileDialog>
 #include <QJsonObject>
 #include <QMessageBox>
 #include <QString>
+
+#include "BazaDanych.h"
+#include "dodawanie_rekordu.h"
+#include "ui_mainwindow.h"
 
 MainWindow *mainWindowInstance = nullptr;
 QJsonObject rekord;
@@ -17,15 +19,15 @@ QJsonObject rekord;
  * Miedzy innymi dodane nagłówków do kolumn, ukrycie identyfikatora rekordów indywidualnego dla kazdego rejestru,
  * ustawienie kolumny tytułowej na dynamiczną
  */
-MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::MainWindow) {
+MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow) {
   ui->setupUi(this);
   mainWindowInstance = this;
 
-  ui->tableWidget->setColumnCount(5); // Set number of columns
+  ui->tableWidget->setColumnCount(5);  // Set number of columns
   QStringList headers;
   headers << "ID" << "Year" << "Name" << "Director" << "Type";
   ui->tableWidget->setHorizontalHeaderLabels(headers);
-  ui->tableWidget->setColumnHidden(0,true);
+  ui->tableWidget->setColumnHidden(0, true);
   ui->tableWidget->horizontalHeader()->setSectionResizeMode(2, QHeaderView::Stretch);
 }
 /*!
@@ -44,7 +46,7 @@ void MainWindow::updateTable() {
   BazaDanych &DB = BazaDanych::Instancja();
   int rc = ui->tableWidget->rowCount();
   int dbs = DB.Rozmiar();
-  //auto tbl = ui->tableWidget;
+  // auto tbl = ui->tableWidget;
   for (int i = 0; i < rc; i++) {
     ui->tableWidget->removeRow(i);
   }
@@ -101,7 +103,7 @@ void MainWindow::on_Sort_Button_clicked() {
     kolumna_sortowania = ui->tableWidget->column(selectedItems.first());
     updateTable();
   } else {
-    QMessageBox::about(this, "Błąd Sortowania","Nie Wybrano Kolumny Sortującej");
+    QMessageBox::about(this, "Błąd Sortowania", "Nie Wybrano Kolumny Sortującej");
   }
 }
 /*!
@@ -151,7 +153,7 @@ void MainWindow::on_Edit_Button_clicked() {
  */
 void MainWindow::on_pushButton_Save_clicked() {
   BazaDanych &DB = BazaDanych::Instancja();
-    QString plik = QFileDialog::getSaveFileName(this,"Zapisz bazę danych","","*.json");
+  QString plik = QFileDialog::getSaveFileName(this, "Zapisz bazę danych", "", "*.json");
   if (DB.ZapisDoPliku(plik)) {
     QMessageBox::about(this, "Zapis pomyślny.", "Plik zapisany.");
   } else {

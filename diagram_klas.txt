@@ -1,0 +1,87 @@
+@startuml
+interface plik{
+ public:
+  + {abstract} bool open(const QString &name, 
+    \tQIODeviceBase::OpenMode mode);
+  + {abstract} void close();
+  + {abstract} qint64 write(const QByteArray &data);
+  +{abstract} QByteArray readAll();
+  +{static} Plik &Instancja();
+}
+ class qplik {
+  -QFile f;
+  +QPlik();
+  + bool open(const QString &name, 
+  \tQIODeviceBase::OpenMode mode);
+  + void close();
+  + qint64 write(const QByteArray &data);
+  + QByteArray readAll();
+}
+class Plik_Mock {
+ 
+  +MOCK_METHOD(bool, open, (const QString &name, 
+  \tQIODeviceBase::OpenMode mode));
+  +MOCK_METHOD(void, close, ());
+  +MOCK_METHOD(qint64, write, (const QByteArray &data));
+  +MOCK_METHOD(QByteArray, readAll, ());
+}
+
+interface BazaDanych {
+ public:
+ +{static} BazaDanych &Instancja();
+  + {abstract} QString DodawnieRekordu(int _rok, QString _tytul,
+\t  QString _rezyser, QString _gatunek);
+  + {abstract} void KasowanieRekordu(int _id);
+  + {abstract} void ResetIteratoraRekordu();
+  + {abstract} QJsonObject DajRekord(int _indexId);
+  + {abstract} QJsonObject IteratorRekordu();
+  + {abstract} void EdytowanieRekordu(int _id, int _rok,
+  \tQString _tytul, QString _rezyser, QString _gatunek);
+  + {abstract} bool ZapisDoPliku(const QString &fileName);
+  + {abstract} bool OdczytZPliku(const QString &fileName);
+  + {abstract} int Rozmiar();
+}
+
+class BazaJson {
+  +int id;
+  +QJsonArray db;
+  +QString plik_db;
+  +int indexNext;
+  +BazaJson();
+  + {abstract} QString DodawnieRekordu(int _rok, QString _tytul, QString _rezyser, QString _gatunek);
+  + {abstract} void KasowanieRekordu(int _id);
+  + {abstract} void ResetIteratoraRekordu();
+  + {abstract} QJsonObject DajRekord(int _indexId);
+  + {abstract} QJsonObject IteratorRekordu();
+  {static} BazaDanych &Instancja();
+  + {abstract} void EdytowanieRekordu(int _id, int _rok, QString _tytul, QString _rezyser, QString _gatunek);
+  + {abstract} bool ZapisDoPliku(const QString &fileName);
+  + {abstract} bool OdczytZPliku(const QString &fileName);
+  + {abstract} int Rozmiar();
+}
+class MainWindow {
+  +explicit MainWindow(QWidget *parent = nullptr);
+  +MainWindow();
+  +Ui::MainWindow *ui;
+  +void updateTable();
+  +int kolumna_sortowania = 0;
+  +int edit_id = 0;
+  +dodawanie_rekordu *okno;
+  +Edit *okno2;
+
+ private slots:
+  -void on_Add_Button_clicked();
+  -void on_Delete_Button_clicked();
+  -void on_Sort_Button_clicked();
+  -void on_Search_Button_clicked();
+  -void on_Refresh_Button_clicked();
+  -void on_Edit_Button_clicked();
+  -void on_pushButton_Save_clicked();
+  -void on_pushButton_Load_clicked();
+}
+plik <|-- qplik
+plik <|-- Plik_Mock
+BazaDanych <|-- BazaJson
+qplik -->BazaJson
+MainWindow <-- BazaJson
+@enduml

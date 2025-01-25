@@ -20,7 +20,7 @@ TEST(DBTEST, test1) {
   ASSERT_THAT(0, Eq(0));
 }
 
-TEST(DBTEST, otwieranie_nieistnejacego_pliku) {
+TEST(DBTEST, otwieranie_nieistnejacego_pliku_do_odczytu) {
   Plik_Mock m;
   BazaJson db_test;
   pa = &m;
@@ -30,7 +30,7 @@ TEST(DBTEST, otwieranie_nieistnejacego_pliku) {
   db_test.OdczytZPliku("");
 }
 
-TEST(DBTEST, otwieranie_pustego_pliku) {
+TEST(DBTEST, otwieranie_pustego_pliku_do_odczytu) {
   Plik_Mock m;
   BazaJson db_test;
   QByteArray pusty_odczyt;
@@ -45,7 +45,7 @@ TEST(DBTEST, otwieranie_pustego_pliku) {
   EXPECT_THAT(db_test.Rozmiar(), 0);
 }
 
-TEST(DBTEST, otwieranie_pliku_z_jednym_rekordem) {
+TEST(DBTEST, otwieranie_pliku_do_odczytu_z_jednym_rekordem) {
   Plik_Mock m;
   BazaJson db_test;
   const QString s = "jeden_rekord.json";
@@ -60,7 +60,7 @@ TEST(DBTEST, otwieranie_pliku_z_jednym_rekordem) {
   EXPECT_THAT(db_test.Rozmiar(), 0);
 }
 
-TEST(DBTEST, otwieranie_pliku_z_jednym_elementem_tablicy) {
+TEST(DBTEST, otwieranie_pliku_do_odczytu_z_jednym_elementem_tablicy) {
   Plik_Mock m;
   BazaJson db_test;
   const QString s = "jeden_rekord.json";
@@ -75,7 +75,7 @@ TEST(DBTEST, otwieranie_pliku_z_jednym_elementem_tablicy) {
   EXPECT_THAT(db_test.Rozmiar(), 1);
 }
 
-TEST(DBTEST, otwieranie_pliku_nie_json) {
+TEST(DBTEST, otwieranie_pliku_do_odczytu_nie_json) {
   Plik_Mock m;
   BazaJson db_test;
   const QByteArray pojedynczy_rekord("to nie jest plik JSON");
@@ -102,7 +102,7 @@ TEST(DBTEST, nieudane_otwarcie_pliku_do_zapisu) {
   EXPECT_THAT(db_test.ZapisDoPliku(s), false);
 }
 
-TEST(DBTEST, zapisywanie_do_pliku) {
+TEST(DBTEST, udany_zapis_do_pliku) {
   Plik_Mock m;
   BazaJson db_test;
   const QString s = "plik.json";

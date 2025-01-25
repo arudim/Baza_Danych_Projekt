@@ -1,0 +1,37 @@
+@startuml
+
+left to right direction
+
+
+package Baza_Danych_Filmow {
+json JSON {
+   "id": 0,
+    "rezyser": "Christopher Nolan",
+    "rodzaj": "Science Fiction",
+    "rok": 2014,
+    "tytul": "Interstellar"
+}
+package Educja_Danych{
+  usecase "Dodanie Rekordu" as UC2
+  usecase "Edycja Rekordu" as UC3
+  usecase "Kasowanie Rekordu" as UC4
+}
+package Operacje_na_Pliku {
+  usecase "Odczyt Bazay z Pliku" as UC7
+  usecase "Zapis do Pliku" as UC8
+}
+package Operacie_na_GUI{
+  usecase "Sortowanie Danych" as UC5
+  usecase "Filtrowanie Danych" as UC6
+  usecase "Odswierzanie_danych" as UC9
+}
+  usecase "Start Programu" as UC1
+}
+actor Uzytkownik as u
+u --> UC1
+u --> Educja_Danych
+u --> Operacje_na_Pliku
+u --> Operacie_na_GUI
+UC7 <.. JSON
+UC8 ..> JSON
+@enduml

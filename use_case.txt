@@ -11,7 +11,7 @@ json JSON {
     "rok": 2014,
     "tytul": "Interstellar"
 }
-package Educja_Danych{
+package Edycja_Danych{
   usecase "Dodanie Rekordu" as UC2
   usecase "Edycja Rekordu" as UC3
   usecase "Kasowanie Rekordu" as UC4
@@ -29,7 +29,7 @@ package Operacie_na_GUI{
 }
 actor Uzytkownik as u
 u --> UC1
-u --> Educja_Danych
+u --> Edycja_Danych
 u --> Operacje_na_Pliku
 u --> Operacie_na_GUI
 UC7 <.. JSON
